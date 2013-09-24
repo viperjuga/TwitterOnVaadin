@@ -1,7 +1,11 @@
 package com;
 
 import com.vaadin.Application;
+import com.vaadin.terminal.Sizeable;
 import com.vaadin.ui.*;
+
+import java.io.IOException;
+
 /**
  * User: ASUS
  * Date: 9/18/13
@@ -16,8 +20,8 @@ public class MyTwitter extends Application {
     //<editor-fold desc="Constructor">
     public MyTwitter(){
         mWindow = new Window("Twitter Application");
-        mUserName = new TextField("Username");
-        mPassword = new PasswordField("Password");
+        mUserName = new TextField();
+        mPassword = new PasswordField();
         mLogin = new Button("Login",btn_login_click);
     }
     //</editor-fold>
@@ -25,9 +29,35 @@ public class MyTwitter extends Application {
     //<editor-fold desc="General method">
     @Override
     public void init() {
-        mWindow.addComponent(mUserName);
-        mWindow.addComponent(mPassword);
-        mWindow.addComponent(mLogin);
+
+        GridLayout gridLayout = new GridLayout(3,3);
+        gridLayout.setWidth(60, Sizeable.UNITS_PERCENTAGE);
+        gridLayout.setHeight(60, Sizeable.UNITS_PERCENTAGE);
+
+        Panel panel = new Panel("Login");
+        panel.setSizeUndefined();
+
+        CustomLayout customLayout = null;
+        try {
+            customLayout = new CustomLayout(getClass().getResourceAsStream("LoginScreen.html"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        customLayout.addComponent(mUserName, "username");
+        customLayout.addComponent(mPassword, "password");
+        customLayout.addComponent(mLogin, "okbutton");
+
+        panel.setContent(customLayout);
+
+        VerticalLayout verticalLayout = new VerticalLayout();
+        verticalLayout.addComponent(panel);
+        verticalLayout.setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+
+        gridLayout.addComponent(verticalLayout,2,2);
+
+        mWindow.setLayout(gridLayout);
+
         setMainWindow(mWindow);
     }
     //</editor-fold>
