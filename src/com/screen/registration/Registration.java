@@ -39,19 +39,16 @@ public class Registration {
     //</editor-fold>
 
     //<editor-fold desc="General Methods">
-    public GridLayout getRegistrationScreen(){
+    public VerticalLayout getRegistrationScreen(){
         Panel panel = new Panel("Registration");
         panel.setSizeUndefined();
 
-        CustomLayout customLayout = null;
+        CustomLayout customLayout;
         try {
             customLayout = new CustomLayout(getClass().getResourceAsStream("Registration.html"));
         } catch (IOException e) {
-            e.printStackTrace();
+            return new VerticalLayout();
         }
-        GridLayout registrationScreen = new GridLayout(3,3);
-        registrationScreen.setWidth(60, Sizeable.UNITS_PERCENTAGE);
-        registrationScreen.setHeight(60, Sizeable.UNITS_PERCENTAGE);
 
         customLayout.addComponent(mForename, "forename");
         customLayout.addComponent(mSurname, "surname");
@@ -66,10 +63,10 @@ public class Registration {
 
         VerticalLayout registrationTemplate = new VerticalLayout();
         registrationTemplate.addComponent(panel);
+        registrationTemplate.setSizeFull();
         registrationTemplate.setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
 
-        registrationScreen.addComponent(registrationTemplate, 2, 2);
-        return registrationScreen;
+        return registrationTemplate;
     }
     //</editor-fold>
 

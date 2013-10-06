@@ -33,7 +33,7 @@ public class Login {
         Panel panel = new Panel("Login");
         panel.setSizeUndefined();
 
-        CustomLayout customLayout = null;
+        CustomLayout customLayout;
         try {
             customLayout = new CustomLayout(getClass().getResourceAsStream("Login.html"));
         } catch (IOException e) {

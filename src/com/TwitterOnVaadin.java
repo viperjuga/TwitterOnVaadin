@@ -24,9 +24,6 @@ public class TwitterOnVaadin extends Application {
     //<editor-fold desc="General method">
     @Override
     public void init() {
-
-
-
         Login loginScreen = new Login(mWindow);
 
         mWindow.setContent(loginScreen.getLoginScreen());
