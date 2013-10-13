@@ -1,6 +1,7 @@
 package com;
 
 import com.screen.login.Login;
+import com.screen.main.Main;
 import com.screen.registration.Registration;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.server.VaadinRequest;
@@ -23,7 +24,9 @@ public class TwitterOnVaadin extends UI {
     protected void init(VaadinRequest request) {
            mNavigator = new Navigator(this,this);
         mNavigator.addView("", new Login());
+        mNavigator.addView(LOGIN_SCREEN, new Login());
         mNavigator.addView(REGISTRATION_SCREEN, new Registration());
+        mNavigator.addView(MAIN_SCREEN, new Main());
     }
 
 }

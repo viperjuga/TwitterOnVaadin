@@ -19,14 +19,9 @@ public class Login extends VerticalLayout implements View {
     PasswordField mPassword;
     Button mLogin;
     Button mRegistration;
-    Window mCtx;
 
      //<editor-fold desc="Constructor">
     public Login(){
-        mUserName = new TextField();
-        mPassword = new PasswordField();
-        mLogin = new Button("Login", btn_login_click);
-        mRegistration = new Button("Registration", btn_registration_click);
         init();
     }
     //</editor-fold>
@@ -36,24 +31,38 @@ public class Login extends VerticalLayout implements View {
         Panel panel = new Panel("Login");
         panel.setSizeUndefined();
 
+        initComponents();
+
+        panel.setContent(createLogLayout());
+
+        setSizeFull();
+        addComponent(panel);
+        setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+    }
+
+    private void initComponents(){
+        mUserName = new TextField();
+        mPassword = new PasswordField();
+        mLogin = new Button("Login", btn_login_click);
+        mRegistration = new Button("Registration", btn_registration_click);
+    }
+
+    private CustomLayout createLogLayout(){
         CustomLayout customLayout;
         try {
             customLayout = new CustomLayout(getClass().getResourceAsStream("Login.html"));
         } catch (IOException e) {
             e.printStackTrace();
-            return;
+            return null;
         }
         customLayout.addComponent(mUserName, "username");
         customLayout.addComponent(mPassword, "password");
         customLayout.addComponent(mLogin, "ok");
         customLayout.addComponent(mRegistration, "registration");
 
-        panel.setContent(customLayout);
-
-        setSizeFull();
-        addComponent(panel);
-        setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+        return customLayout;
     }
+
     //</editor-fold>
 
     //<editor-fold desc="Listeners">
@@ -66,8 +75,7 @@ public class Login extends VerticalLayout implements View {
     Button.ClickListener btn_login_click = new Button.ClickListener(){
         @Override
         public void buttonClick(Button.ClickEvent clickEvent) {
-            Main main = new Main(mCtx);
-            mCtx.setContent(main.getMainScreen());
+           getUI().getNavigator().navigateTo(TwitterOnVaadin.MAIN_SCREEN);
 //            String yourAcc = String.format("Your name:%s Your password:%s",mUserName,mPassword);
 //            mCtx.showNotification(yourAcc);
         }

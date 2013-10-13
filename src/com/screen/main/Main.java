@@ -1,5 +1,11 @@
 package com.screen.main;
 
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
+import com.vaadin.server.ClassResource;
+import com.vaadin.server.Resource;
+import com.vaadin.server.StreamResource;
+import com.vaadin.server.ThemeResource;
 import com.vaadin.ui.*;
 
 import java.io.IOException;
@@ -9,27 +15,26 @@ import java.io.IOException;
  * Date: 10/11/13
  * Time: 12:03 AM
  */
-public class Main {
+public class Main extends VerticalLayout implements View {
 
     Label mForename;
     Label mSurname;
     Table mNews;
     Embedded mPhoto;
-    Window mCtx;
     MenuBar mMenu;
 
     //<editor-fold desc="Constructor">
-    public Main(Window ctx){
+    public Main(){
         mForename = new Label();
         mSurname = new Label();
         mNews = new Table("News");
         mMenu = new MenuBar();
         //mPhoto = new Embedded("Image", new ThemeResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.jpg"));
-        mCtx = ctx;
+        init();
     }
     //</editor-fold>
 
-    public VerticalLayout getMainScreen(){
+    public void init(){
 
         Panel panel = new Panel("Profile");
         panel.setSizeUndefined();
@@ -39,7 +44,7 @@ public class Main {
             customLayout = new CustomLayout(getClass().getResourceAsStream("Main.html"));
         } catch (IOException e) {
             e.printStackTrace();
-            return new VerticalLayout();
+            return;
         }
 
         mNews.addContainerProperty("User", Label.class, null);
@@ -57,7 +62,7 @@ public class Main {
             // item ID as user-defined data.
             Button detailsField = new Button("Show post");
             detailsField.setData(itemId);
-            detailsField.addListener(show_details_click);
+            detailsField.addClickListener(show_details_click);
             detailsField.addStyleName("link");
 
             // Create the table row.
@@ -75,18 +80,23 @@ public class Main {
         mMenu.addItem("Find user", null);
         mMenu.addItem("Add post", null);
         mMenu.setWidth("400");
+        Image image = new Image("",new ClassResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.png"));
+        image.setHeight("30");
+        image.setWidth("30");
 
+// Instruct browser not to cache the image
+
+// Display the image
         customLayout.addComponent(mNews, "wall");
-        customLayout.addComponent(mPhoto, "profile");
+        customLayout.addComponent(image, "profile");
+//        customLayout.addComponent(mPhoto, "profile");
         customLayout.addComponent(mMenu,"menu");
 //        customLayout.addComponent(mPhoto, "profile");
 
         panel.setContent(customLayout);
-        VerticalLayout loginTemplate = new VerticalLayout();
-        loginTemplate.setSizeFull();
-        loginTemplate.addComponent(panel);
-        loginTemplate.setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
-        return loginTemplate;
+        setSizeFull();
+        addComponent(panel);
+        setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
     }
     //</editor-fold>
     //<editor-fold desc="Listeners">
@@ -98,6 +108,11 @@ public class Main {
                //     iid.intValue() + " clicked.");
         }
     };
+
+    @Override
+    public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
+
+    }
     //</e
     //</editor-fold>
 }

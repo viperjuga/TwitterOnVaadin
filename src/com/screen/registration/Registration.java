@@ -27,6 +27,25 @@ public class Registration extends VerticalLayout implements View {
 
     //<editor-fold desc="Constructor">
     public Registration(){
+
+        init();
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="General Methods">
+    public void init(){
+        Panel panel = new Panel("Registration");
+        panel.setSizeUndefined();
+
+        initComponents();
+
+        panel.setContent(createRegLayout());
+
+        addComponent(panel);
+        setSizeFull();
+        setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+    }
+    private void initComponents(){
         mSurname = new TextField();
         mForename = new TextField();
         mAge = new TextField();
@@ -36,20 +55,14 @@ public class Registration extends VerticalLayout implements View {
         mOk = new Button("Ok",btn_ok_click);
         mCancel = new Button("Cancel",btn_cancel_click);
     }
-    //</editor-fold>
 
-    //<editor-fold desc="General Methods">
-    public void init(){
-        Panel panel = new Panel("Registration");
-        panel.setSizeUndefined();
-
+    private CustomLayout createRegLayout(){
         CustomLayout customLayout;
         try {
             customLayout = new CustomLayout(getClass().getResourceAsStream("Registration.html"));
         } catch (IOException e) {
-            return;
+            return null;
         }
-
         customLayout.addComponent(mForename, "forename");
         customLayout.addComponent(mSurname, "surname");
         customLayout.addComponent(mAge,"age");
@@ -59,11 +72,7 @@ public class Registration extends VerticalLayout implements View {
         customLayout.addComponent(mOk, "ok");
         customLayout.addComponent(mCancel, "cancel");
 
-        panel.setContent(customLayout);
-
-        addComponent(panel);
-        setSizeFull();
-        setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+        return customLayout;
     }
     //</editor-fold>
 
