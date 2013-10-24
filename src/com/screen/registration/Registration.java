@@ -1,6 +1,7 @@
 package com.screen.registration;
 
 import com.TwitterOnVaadin;
+import com.utils.Utils;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.*;
@@ -81,7 +82,7 @@ public class Registration extends VerticalLayout implements View {
 
         @Override
         public void buttonClick(Button.ClickEvent clickEvent) {
-           getUI().getNavigator().navigateTo(TwitterOnVaadin.LOGIN_SCREEN);
+           getUI().getNavigator().navigateTo(Utils.LOGIN_SCREEN);
         }
     };
     Button.ClickListener btn_ok_click = new Button.ClickListener(){
@@ -89,7 +90,7 @@ public class Registration extends VerticalLayout implements View {
         @Override
         public void buttonClick(Button.ClickEvent clickEvent) {
             Notification.show("Now you can try login!");
-            getUI().getNavigator().navigateTo(TwitterOnVaadin.LOGIN_SCREEN);
+            getUI().getNavigator().navigateTo(Utils.LOGIN_SCREEN);
         }
     };
 

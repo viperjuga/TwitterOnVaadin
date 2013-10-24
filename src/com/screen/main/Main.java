@@ -1,5 +1,6 @@
 package com.screen.main;
 
+import com.models.User;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.ClassResource;
@@ -17,19 +18,8 @@ import java.io.IOException;
  */
 public class Main extends VerticalLayout implements View {
 
-    Label mForename;
-    Label mSurname;
-    Table mNews;
-    Embedded mPhoto;
-    MenuBar mMenu;
-
     //<editor-fold desc="Constructor">
     public Main(){
-        mForename = new Label();
-        mSurname = new Label();
-        mNews = new Table("News");
-        mMenu = new MenuBar();
-        //mPhoto = new Embedded("Image", new ThemeResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.jpg"));
         init();
     }
     //</editor-fold>
@@ -46,9 +36,44 @@ public class Main extends VerticalLayout implements View {
             e.printStackTrace();
             return;
         }
+        User user = new User();
+        String profileInfo = String.format("Forename: %s\nSurname: %s\nAge: %s",user.getForename(),user.getSurname(),user.getAge());
+        Label profile = new Label(profileInfo);
+        Image image = new Image(user.getUsername(),new ClassResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.png"));
+        image.setHeight("30");
+        image.setWidth("30");
 
-        mNews.addContainerProperty("User", Label.class, null);
-        mNews.addContainerProperty("Post", Button.class, null);
+// Instruct browser not to cache the image
+        Table news = createTable();
+        MenuBar menu = createMenu();
+
+        customLayout.addComponent(news, "wall");
+        customLayout.addComponent(image, "image");
+        customLayout.addComponent(menu,"menu");
+        customLayout.addComponent(profile, "profile");
+
+        panel.setContent(customLayout);
+        setSizeFull();
+        addComponent(panel);
+        setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+    }
+
+    private MenuBar createMenu(){
+        MenuBar menuBar = new MenuBar();
+        menuBar.addItem("Main", null);
+        menuBar.addItem("Find users", null);
+        menuBar.addItem("Add post", null);
+        menuBar.addItem("Blocked users", null);
+        menuBar.addItem("Friends", null);
+        menuBar.setWidth("400");
+        return menuBar;
+    }
+
+    private Table createTable(){
+        Table newsTable = new Table("News");
+        newsTable.addContainerProperty("User", Label.class, null);
+        newsTable.addContainerProperty("Post", Button.class, null);
+        newsTable.addContainerProperty("Details", Label.class, null);
 
 /* Add a few items in the table. */
         for (int i=0; i<100; i++) {
@@ -60,43 +85,24 @@ public class Main extends VerticalLayout implements View {
             // Create a button and handle its click. A Button does not
             // know the item it is contained in, so we have to store the
             // item ID as user-defined data.
-            Button detailsField = new Button("Show post");
-            detailsField.setData(itemId);
-            detailsField.addClickListener(show_details_click);
-            detailsField.addStyleName("link");
+            Button postField = new Button("See post");
+            postField.setData(itemId);
+            postField.addClickListener(show_details_click);
+            postField.addStyleName("link");
+            Label detailField = new Label("Date");
 
             // Create the table row.
-            mNews.addItem(new Object[] {sumField, detailsField},
+            newsTable.addItem(new Object[]{sumField, postField, detailField},
                     itemId);
         }
 
 // Show just three rows because they are so high.
-        mNews.setPageLength(5);
+        newsTable.setPageLength(5);
 
-        mNews.setWidth("400");
-        mNews.setHeight("400");
+        newsTable.setWidth("400");
+        newsTable.setHeight("400");
 
-        mMenu.addItem("Change profile", null);
-        mMenu.addItem("Find user", null);
-        mMenu.addItem("Add post", null);
-        mMenu.setWidth("400");
-        Image image = new Image("",new ClassResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.png"));
-        image.setHeight("30");
-        image.setWidth("30");
-
-// Instruct browser not to cache the image
-
-// Display the image
-        customLayout.addComponent(mNews, "wall");
-        customLayout.addComponent(image, "profile");
-//        customLayout.addComponent(mPhoto, "profile");
-        customLayout.addComponent(mMenu,"menu");
-//        customLayout.addComponent(mPhoto, "profile");
-
-        panel.setContent(customLayout);
-        setSizeFull();
-        addComponent(panel);
-        setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+        return newsTable;
     }
     //</editor-fold>
     //<editor-fold desc="Listeners">
