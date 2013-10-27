@@ -1,0 +1,126 @@
+package com.screen.find;
+
+import com.models.SelectedUser;
+import com.models.User;
+import com.screen.main.Main;
+import com.utils.Utils;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
+import com.vaadin.server.VaadinSession;
+import com.vaadin.ui.*;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: ASUS
+ * Date: 10/25/13
+ * Time: 10:35 AM
+ * To change this template use File | Settings | File Templates.
+ */
+public class TwitterUsers extends VerticalLayout implements View {
+
+    //<editor-fold desc="Constructor">
+    public TwitterUsers(){
+        init();
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="General Methods">
+    public void init(){
+        Panel panel = new Panel("Find users");
+        panel.setSizeUndefined();
+
+        panel.setContent(createTwitterUsersLayout());
+
+        setSizeFull();
+        addComponent(panel);
+        setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+    }
+
+    private CustomLayout createTwitterUsersLayout(){
+        CustomLayout customLayout;
+        try {
+            customLayout = new CustomLayout(getClass().getResourceAsStream("TwitterUsers.html"));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        MenuBar menu = new MenuBar();
+        menu.addItem("Main", main);
+        menu.setWidth("400");
+
+        ComboBox fields = new ComboBox();
+        TextField search = new TextField();
+
+        customLayout.addComponent(fields, "fields");
+        customLayout.addComponent(menu, "menu");
+        customLayout.addComponent(search, "search");
+        customLayout.addComponent(createTable(), "list");
+
+        return customLayout;
+    }
+    private Table createTable(){
+        Table newsTable = new Table();
+        newsTable.addContainerProperty("User", Button.class, null);
+
+        for (int i=0; i < Utils.getHardcodedUsers().size(); i++) {
+
+            Integer itemId = new Integer(i);
+
+            // Create a button and handle its click. A Button does not
+            // know the item it is contained in, so we have to store the
+            // item ID as user-defined data.
+            Button user = new Button(Utils.getHardcodedUsers().get(i).getUsername());
+            user.setData(itemId);
+            user.addClickListener(show_user);
+            user.addStyleName("link");
+
+            // Create the table row.
+            newsTable.addItem(new Object[]{user},
+                    itemId);
+        }
+
+// Show just three rows because they are so high.
+        newsTable.setPageLength(5);
+
+        newsTable.setWidth("400");
+        newsTable.setHeight("400");
+
+        return newsTable;
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Listeners">
+    MenuBar.Command main = new MenuBar.Command(){
+
+        @Override
+        public void menuSelected(MenuBar.MenuItem menuItem) {
+           getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
+        }
+    };
+    Button.ClickListener show_user = new Button.ClickListener(){
+
+        @Override
+        public void buttonClick(Button.ClickEvent clickEvent) {
+            Integer iid = (Integer)clickEvent.getButton().getData();
+
+            SelectedUser user = new SelectedUser(Utils.getHardcodedUsers().get(iid));
+
+getSession().getSession().setAttribute("selectedUser", user);
+            getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
+
+
+
+
+
+        }
+    };
+
+    @Override
+    public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
+
+    }
+    //</editor-fold>
+}

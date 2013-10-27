@@ -1,6 +1,8 @@
 package com.screen.main;
 
+import com.models.SelectedUser;
 import com.models.User;
+import com.utils.Utils;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.ClassResource;
@@ -36,19 +38,31 @@ public class Main extends VerticalLayout implements View {
             e.printStackTrace();
             return;
         }
-        User user = new User();
-        String profileInfo = String.format("Forename: %s\nSurname: %s\nAge: %s",user.getForename(),user.getSurname(),user.getAge());
-        Label profile = new Label(profileInfo);
-        Image image = new Image(user.getUsername(),new ClassResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.png"));
-        image.setHeight("30");
-        image.setWidth("30");
 
-// Instruct browser not to cache the image
+        String profileInfo = "";
+
+        if(getSession() != null && getSession().getSession()!=null){
+        SelectedUser user = (SelectedUser)getSession().getSession().getAttribute("selectedUser");
+
+        if(user == null){
+            User userr = new User();
+            profileInfo = String.format("Forename: %s\nSurname: %s\nAge: %s",userr.getForename(),userr.getSurname(),userr.getAge());
+        }
+        else{
+            profileInfo = String.format("Forename: %s\nSurname: %s\nAge: %s",user.getForename(),user.getSurname(),user.getAge());
+        }
+        }
+        Label profile = new Label(profileInfo);
+//        //Image image = new Image(user.getUsername(),new ClassResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.png"));
+//        image.setHeight("30");
+//        image.setWidth("30");
+
+        // Instruct browser not to cache the image
         Table news = createTable();
         MenuBar menu = createMenu();
 
         customLayout.addComponent(news, "wall");
-        customLayout.addComponent(image, "image");
+       // customLayout.addComponent(image, "image");
         customLayout.addComponent(menu,"menu");
         customLayout.addComponent(profile, "profile");
 
@@ -61,7 +75,7 @@ public class Main extends VerticalLayout implements View {
     private MenuBar createMenu(){
         MenuBar menuBar = new MenuBar();
         menuBar.addItem("Main", null);
-        menuBar.addItem("Find users", null);
+        menuBar.addItem("Find users",find_user);
         menuBar.addItem("Add post", null);
         menuBar.addItem("Blocked users", null);
         menuBar.addItem("Friends", null);
@@ -106,6 +120,15 @@ public class Main extends VerticalLayout implements View {
     }
     //</editor-fold>
     //<editor-fold desc="Listeners">
+
+    MenuBar.Command find_user = new MenuBar.Command(){
+
+        @Override
+        public void menuSelected(MenuBar.MenuItem menuItem) {
+            getUI().getNavigator().navigateTo(Utils.FIND_USERS);
+        }
+    };
+
     Button.ClickListener show_details_click = new Button.ClickListener(){
         @Override
         public void buttonClick(Button.ClickEvent clickEvent) {

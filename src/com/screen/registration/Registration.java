@@ -15,17 +15,6 @@ import java.io.IOException;
  */
 public class Registration extends VerticalLayout implements View {
 
-    TextField mSurname;
-    TextField mForename;
-    TextField mAge;
-    TextField mUserName;
-    PasswordField mPassword;
-    PasswordField mRepPassword;
-    Button mOk;
-    Button mCancel;
-    Window mCtx;
-
-
     //<editor-fold desc="Constructor">
     public Registration(){
 
@@ -38,23 +27,11 @@ public class Registration extends VerticalLayout implements View {
         Panel panel = new Panel("Registration");
         panel.setSizeUndefined();
 
-        initComponents();
-
         panel.setContent(createRegLayout());
 
         addComponent(panel);
         setSizeFull();
         setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
-    }
-    private void initComponents(){
-        mSurname = new TextField();
-        mForename = new TextField();
-        mAge = new TextField();
-        mUserName = new TextField();
-        mPassword = new PasswordField();
-        mRepPassword = new PasswordField();
-        mOk = new Button("Ok",btn_ok_click);
-        mCancel = new Button("Cancel",btn_cancel_click);
     }
 
     private CustomLayout createRegLayout(){
@@ -64,14 +41,24 @@ public class Registration extends VerticalLayout implements View {
         } catch (IOException e) {
             return null;
         }
-        customLayout.addComponent(mForename, "forename");
-        customLayout.addComponent(mSurname, "surname");
-        customLayout.addComponent(mAge,"age");
-        customLayout.addComponent(mUserName, "username");
-        customLayout.addComponent(mPassword, "password");
-        customLayout.addComponent(mRepPassword,"reppassword");
-        customLayout.addComponent(mOk, "ok");
-        customLayout.addComponent(mCancel, "cancel");
+
+        TextField surname = new TextField();
+        TextField forename = new TextField();
+        TextField age = new TextField();
+        TextField username = new TextField();
+        PasswordField password = new PasswordField();
+        PasswordField repPassword = new PasswordField();
+        Button ok = new Button("Ok",btn_ok_click);
+        Button cancel = new Button("Cancel",btn_cancel_click);
+
+        customLayout.addComponent(forename, "forename");
+        customLayout.addComponent(surname, "surname");
+        customLayout.addComponent(age,"age");
+        customLayout.addComponent(username, "username");
+        customLayout.addComponent(password, "password");
+        customLayout.addComponent(repPassword,"reppassword");
+        customLayout.addComponent(ok, "ok");
+        customLayout.addComponent(cancel, "cancel");
 
         return customLayout;
     }

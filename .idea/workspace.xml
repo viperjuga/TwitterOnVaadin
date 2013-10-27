@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="049e64cd-cede-4e4b-b28c-cafca72155fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/models/Post.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/models/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/utils/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/models/SelectedUser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/screen/find/TwitterUsers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/screen/login/Login.java" afterPath="$PROJECT_DIR$/src/com/screen/login/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/screen/main/Main.html" afterPath="$PROJECT_DIR$/src/com/screen/main/Main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/screen/main/Main.java" afterPath="$PROJECT_DIR$/src/com/screen/main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/screen/registration/Registration.java" afterPath="$PROJECT_DIR$/src/com/screen/registration/Registration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/TwitterOnVaadin.java" afterPath="$PROJECT_DIR$/src/com/TwitterOnVaadin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/utils/Utils.java" afterPath="$PROJECT_DIR$/src/com/utils/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TwitterOnVaadin.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382642805373" ignored="false" />
+    <file path="/Dummy.txt" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382879834053" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/web/WEB-INF/web.xml" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1379529599902" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/src/com/MySampleVaadinApplication.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1379529599452" ignored="false" />
     <file path="/web.xml" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1381689759151" ignored="false" />
@@ -22,16 +22,21 @@
     <file path="/GeneralScreen.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1379716897888" ignored="false" />
     <file path="/LoginScreen.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380780466152" ignored="false" />
     <file path="/a.dummy" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380780491101" ignored="false" />
-    <file path="/fragment.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380780667174" ignored="false" />
-    <file path="/Registration.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382643104941" ignored="false" />
+    <file path="/fragment.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382882756191" ignored="false" />
+    <file path="/Registration.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382687423297" ignored="false" />
     <file path="/Registration.html" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380783563110" ignored="false" />
-    <file path="/Login.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382643078576" ignored="false" />
-    <file path="/TwitterOnVaadin.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382643009580" ignored="false" />
+    <file path="/Login.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382687112903" ignored="false" />
+    <file path="/TwitterOnVaadin.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382688421984" ignored="false" />
     <file path="/Login.html" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380784379349" ignored="false" />
-    <file path="/Main.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382648864112" ignored="false" />
+    <file path="/Main.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382883145091" ignored="false" />
     <file path="/Main.html" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382646526557" ignored="false" />
     <file path="/User.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382648624345" ignored="false" />
     <file path="/Post.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382648467620" ignored="false" />
+    <file path="/Users.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382688230582" ignored="false" />
+    <file path="/TwitterUsers.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382883256743" ignored="false" />
+    <file path="/TwitterUsers.html" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382689006837" ignored="false" />
+    <file path="/Utils.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382690391410" ignored="false" />
+    <file path="/SelectedUser.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382690999855" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +51,9 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/login/Login.java" line="29" class="com.screen.login.Login" package="com.screen.login">
-        <option name="WATCH_ENTRY" value="true" />
-        <option name="WATCH_EXIT" value="true" />
+    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/main/Main.java" line="44" class="com.screen.main.Main" package="com.screen.main">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -64,7 +68,67 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-    </method_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/main/Main.java" line="45" class="com.screen.main.Main" package="com.screen.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/main/Main.java" line="41" class="com.screen.main.Main" package="com.screen.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/main/Main.java" line="43" class="com.screen.main.Main" package="com.screen.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java" line="108" class="com.screen.find.TwitterUsers$2" package="com.screen.find">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -111,23 +175,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="55" selection-start="1615" selection-end="1615" vertical-scroll-proportion="1.2931035">
-              <folding>
-                <element signature="method#createMenu#0;class#Main#0" expanded="false" />
-                <element signature="method#createTable#0;class#Main#0" expanded="false" />
-                <element signature="e#3936#3941#0" expanded="false" />
-              </folding>
+            <state line="43" column="0" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomLayout.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/ui/CustomLayout.class">
+      <file leaf-file-name="TwitterOnVaadin.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/TwitterOnVaadin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.0">
+            <state line="18" column="4" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,7 +196,7 @@
       <file leaf-file-name="Main.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="74" selection-start="366" selection-end="366" vertical-scroll-proportion="-9.153846">
+            <state line="0" column="0" selection-start="0" selection-end="571" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,43 +205,49 @@
       <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="29" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+            <state line="40" column="30" selection-start="200" selection-end="855" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/models/Post.java">
+      <file leaf-file-name="TwitterUsers.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="27" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0">
+            <state line="111" column="65" selection-start="3412" selection-end="3412" vertical-scroll-proportion="0.3888889">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc;n#TwitterUsers#0;n#TwitterUsers#0" expanded="false" />
+                <element signature="method#TwitterUsers#0;class#TwitterUsers#0" expanded="false" />
+                <element signature="e#3017#3433#0" expanded="true" />
+                <element signature="e#3426#3427#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerRpcManager.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/server/ServerRpcManager.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="16" selection-start="925" selection-end="925" vertical-scroll-proportion="-3.88">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Registration.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.java">
+      <file leaf-file-name="ServerRpcHandler.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/server/communication/ServerRpcHandler.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="58" selection-start="2623" selection-end="2623" vertical-scroll-proportion="0.0">
+            <state line="15" column="17" selection-start="728" selection-end="728" vertical-scroll-proportion="-3.88">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/utils/Utils.java">
+      <file leaf-file-name="SelectedUser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/models/SelectedUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="61" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="11" column="11" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -190,16 +256,7 @@
       <file leaf-file-name="Login.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="64" selection-start="2017" selection-end="2017" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Registration.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="23" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -223,22 +280,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/web/login_screen.html" />
-        <option value="$PROJECT_DIR$/src/com/login_screen.html" />
-        <option value="$PROJECT_DIR$/src/com/LoginScreen.html" />
-        <option value="$PROJECT_DIR$/src/com/MyTwitter.java" />
         <option value="$PROJECT_DIR$/src/com/screen/login/LoginScreen.java" />
         <option value="$PROJECT_DIR$/src/com/screen/registration/Registration.html" />
         <option value="$PROJECT_DIR$/src/com/screen/login/Login.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/com/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/com/TwitterOnVaadin.java" />
-        <option value="$PROJECT_DIR$/src/com/screen/login/Login.java" />
-        <option value="$PROJECT_DIR$/src/com/screen/registration/Registration.java" />
         <option value="$PROJECT_DIR$/src/com/screen/main/Main.html" />
         <option value="$PROJECT_DIR$/src/com/models/Post.java" />
         <option value="$PROJECT_DIR$/src/com/models/User.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/find/Users.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/login/Login.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/registration/Registration.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/find/TwitterUsers.html" />
+        <option value="$PROJECT_DIR$/src/com/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/src/com/models/SelectedUser.java" />
+        <option value="$PROJECT_DIR$/src/com/TwitterOnVaadin.java" />
         <option value="$PROJECT_DIR$/src/com/screen/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java" />
       </list>
     </option>
   </component>
@@ -283,8 +340,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,8 +376,154 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="find" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterOnVaadin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,6 +536,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
@@ -476,7 +678,27 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50032" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -566,7 +788,11 @@
       <created>1381695509751</created>
       <updated>1381695509751</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added Models and Utils">
+      <created>1382649042566</created>
+      <updated>1382649042566</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -578,7 +804,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6712095" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39863715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -592,8 +818,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33049405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17121212" sideWeight="0.67291313" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17121212" sideWeight="0.6013629" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -643,7 +869,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="created new version of TwitterOnVaadin with Vaadin 7 )" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Models and Utils" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -664,6 +890,7 @@
     <MESSAGE value="Updated Main Window, LoginScreen&#10;added new Packages for screens&#10;added new Registration screen" />
     <MESSAGE value="deleting version with vaadin6" />
     <MESSAGE value="created new version of TwitterOnVaadin with Vaadin 7 )" />
+    <MESSAGE value="added Models and Utils" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -673,95 +900,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.html">
+    <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="436" selection-end="545" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="44" selection-start="548" selection-end="548" vertical-scroll-proportion="0.59302324">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/ui/CustomLayout.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/TwitterOnVaadin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="43" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="61" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="64" selection-start="2017" selection-end="2017" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="74" selection-start="366" selection-end="366" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
+        <state line="28" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/models/Post.java">
@@ -771,27 +912,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.java">
+    <entry file="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="58" selection-start="2623" selection-end="2623" vertical-scroll-proportion="0.0">
+        <state line="17" column="60" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="38" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="571" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="29" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+        <state line="40" column="30" selection-start="200" selection-end="855" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/models/SelectedUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="11" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="19" selection-start="3619" selection-end="3645" vertical-scroll-proportion="0.3313433" />
+      </provider>
+    </entry>
+    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/server/communication/UIInitHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="19" selection-start="507" selection-end="507" vertical-scroll-proportion="0.3619403">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/server/ServerRpcManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="16" selection-start="925" selection-end="925" vertical-scroll-proportion="-3.88">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/server/communication/ServerRpcHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="17" selection-start="728" selection-end="728" vertical-scroll-proportion="-3.88">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/TwitterOnVaadin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="4" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/event/ListenerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="16" selection-start="2142" selection-end="2142" vertical-scroll-proportion="0.33208954">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="55" selection-start="1615" selection-end="1615" vertical-scroll-proportion="1.2931035">
+        <state line="43" column="0" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="65" selection-start="3412" selection-end="3412" vertical-scroll-proportion="0.3888889">
           <folding>
-            <element signature="method#createMenu#0;class#Main#0" expanded="false" />
-            <element signature="method#createTable#0;class#Main#0" expanded="false" />
-            <element signature="e#3936#3941#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#TwitterUsers#0;n#TwitterUsers#0" expanded="false" />
+            <element signature="method#TwitterUsers#0;class#TwitterUsers#0" expanded="false" />
+            <element signature="e#3017#3433#0" expanded="true" />
+            <element signature="e#3426#3427#0" expanded="true" />
           </folding>
         </state>
       </provider>

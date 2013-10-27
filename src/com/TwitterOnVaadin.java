@@ -1,9 +1,11 @@
 package com;
 
+import com.screen.find.TwitterUsers;
 import com.screen.login.Login;
 import com.screen.main.Main;
 import com.screen.registration.Registration;
 import com.utils.Utils;
+import com.vaadin.annotations.PreserveOnRefresh;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.UI;
@@ -14,18 +16,14 @@ import com.vaadin.ui.UI;
  * Time: 9:45 PM
  */
 public class TwitterOnVaadin extends UI {
-
-    Navigator mNavigator;
-
-
-
     @Override
     protected void init(VaadinRequest request) {
-        mNavigator = new Navigator(this,this);
-        mNavigator.addView("", new Login());
-        mNavigator.addView(Utils.LOGIN_SCREEN, new Login());
-        mNavigator.addView(Utils.REGISTRATION_SCREEN, new Registration());
-        mNavigator.addView(Utils.MAIN_SCREEN, new Main());
+        Navigator navigator = new Navigator(this,this);
+        navigator.addView("", new Login());
+        navigator.addView(Utils.LOGIN_SCREEN, new Login());
+        navigator.addView(Utils.REGISTRATION_SCREEN, new Registration());
+        navigator.addView(Utils.MAIN_SCREEN, new Main());
+        navigator.addView(Utils.FIND_USERS, new TwitterUsers());
     }
 
 }

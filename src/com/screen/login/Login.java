@@ -1,7 +1,5 @@
 package com.screen.login;
 
-import com.TwitterOnVaadin;
-import com.screen.main.Main;
 import com.utils.Utils;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
@@ -16,10 +14,6 @@ import java.io.IOException;
  */
 public class Login extends VerticalLayout implements View {
 
-    TextField mUserName;
-    PasswordField mPassword;
-    Button mLogin;
-    Button mRegistration;
 
      //<editor-fold desc="Constructor">
     public Login(){
@@ -32,23 +26,14 @@ public class Login extends VerticalLayout implements View {
         Panel panel = new Panel("Login");
         panel.setSizeUndefined();
 
-        initComponents();
-
-        panel.setContent(createLogLayout());
+        panel.setContent(createLoginLayout());
 
         setSizeFull();
         addComponent(panel);
         setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
     }
 
-    private void initComponents(){
-        mUserName = new TextField();
-        mPassword = new PasswordField();
-        mLogin = new Button("Login", btn_login_click);
-        mRegistration = new Button("Registration", btn_registration_click);
-    }
-
-    private CustomLayout createLogLayout(){
+    private CustomLayout createLoginLayout(){
         CustomLayout customLayout;
         try {
             customLayout = new CustomLayout(getClass().getResourceAsStream("Login.html"));
@@ -56,10 +41,16 @@ public class Login extends VerticalLayout implements View {
             e.printStackTrace();
             return null;
         }
-        customLayout.addComponent(mUserName, "username");
-        customLayout.addComponent(mPassword, "password");
-        customLayout.addComponent(mLogin, "ok");
-        customLayout.addComponent(mRegistration, "registration");
+
+        TextField username = new TextField();
+        PasswordField password = new PasswordField();
+        Button login = new Button("Login", btn_login_click);
+        Button registration = new Button("Registration", btn_registration_click);
+
+        customLayout.addComponent(username, "username");
+        customLayout.addComponent(password, "password");
+        customLayout.addComponent(login, "ok");
+        customLayout.addComponent(registration, "registration");
 
         return customLayout;
     }
