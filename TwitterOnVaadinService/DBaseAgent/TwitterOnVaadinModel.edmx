@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TwitterOnVaadinModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TwitterOnVaadinModelStoreContainer">
+          <EntitySet Name="BlockedList" EntityType="TwitterOnVaadinModel.Store.BlockedList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FriendList" EntityType="TwitterOnVaadinModel.Store.FriendList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Post" EntityType="TwitterOnVaadinModel.Store.Post" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="TwitterOnVaadinModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_BlockedList_User" Association="TwitterOnVaadinModel.Store.FK_BlockedList_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="BlockedList" EntitySet="BlockedList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlockedList_User1" Association="TwitterOnVaadinModel.Store.FK_BlockedList_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="BlockedList" EntitySet="BlockedList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FriendList_User" Association="TwitterOnVaadinModel.Store.FK_FriendList_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="FriendList" EntitySet="FriendList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FriendList_User1" Association="TwitterOnVaadinModel.Store.FK_FriendList_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="FriendList" EntitySet="FriendList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Post_User1" Association="TwitterOnVaadinModel.Store.FK_Post_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="Post" EntitySet="Post" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Post_User2" Association="TwitterOnVaadinModel.Store.FK_Post_User2">
+            <End Role="User" EntitySet="User" />
+            <End Role="Post" EntitySet="Post" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BlockedList">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="int" Nullable="false" />
+          <Property Name="BlockedUser" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FriendList">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="int" Nullable="false" />
+          <Property Name="Friend" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Post" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date" Type="varchar(max)" Nullable="false" />
+          <Property Name="User" Type="int" Nullable="false" />
+          <Property Name="Author" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Forename" Type="varchar(max)" />
+          <Property Name="Surname" Type="varchar(max)" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Username" Type="varchar(max)" Nullable="false" />
+          <Property Name="Password" Type="varchar(max)" Nullable="false" />
+          <Property Name="Photo" Type="varchar(max)" />
+          <Property Name="Admin" Type="bit" Nullable="false" />
+          <Property Name="Ban" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BlockedList_User">
+          <End Role="User" Type="TwitterOnVaadinModel.Store.User" Multiplicity="1" />
+          <End Role="BlockedList" Type="TwitterOnVaadinModel.Store.BlockedList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BlockedList">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlockedList_User1">
+          <End Role="User" Type="TwitterOnVaadinModel.Store.User" Multiplicity="1" />
+          <End Role="BlockedList" Type="TwitterOnVaadinModel.Store.BlockedList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BlockedList">
+              <PropertyRef Name="BlockedUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FriendList_User">
+          <End Role="User" Type="TwitterOnVaadinModel.Store.User" Multiplicity="1" />
+          <End Role="FriendList" Type="TwitterOnVaadinModel.Store.FriendList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="FriendList">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FriendList_User1">
+          <End Role="User" Type="TwitterOnVaadinModel.Store.User" Multiplicity="1" />
+          <End Role="FriendList" Type="TwitterOnVaadinModel.Store.FriendList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="FriendList">
+              <PropertyRef Name="Friend" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Post_User1">
+          <End Role="User" Type="TwitterOnVaadinModel.Store.User" Multiplicity="1" />
+          <End Role="Post" Type="TwitterOnVaadinModel.Store.Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Post">
+              <PropertyRef Name="Author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Post_User2">
+          <End Role="User" Type="TwitterOnVaadinModel.Store.User" Multiplicity="1" />
+          <End Role="Post" Type="TwitterOnVaadinModel.Store.Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Post">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TwitterOnVaadinModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TwitterOnVaadinEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BlockedLists" EntityType="TwitterOnVaadinModel.BlockedList" />
+          <EntitySet Name="FriendLists" EntityType="TwitterOnVaadinModel.FriendList" />
+          <EntitySet Name="Posts" EntityType="TwitterOnVaadinModel.Post" />
+          <EntitySet Name="Users" EntityType="TwitterOnVaadinModel.User" />
+          <AssociationSet Name="FK_BlockedList_User" Association="TwitterOnVaadinModel.FK_BlockedList_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="BlockedList" EntitySet="BlockedLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlockedList_User1" Association="TwitterOnVaadinModel.FK_BlockedList_User1">
+            <End Role="User" EntitySet="Users" />
+            <End Role="BlockedList" EntitySet="BlockedLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FriendList_User" Association="TwitterOnVaadinModel.FK_FriendList_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="FriendList" EntitySet="FriendLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FriendList_User1" Association="TwitterOnVaadinModel.FK_FriendList_User1">
+            <End Role="User" EntitySet="Users" />
+            <End Role="FriendList" EntitySet="FriendLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Post_User" Association="TwitterOnVaadinModel.FK_Post_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Post" EntitySet="Posts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Post_User1" Association="TwitterOnVaadinModel.FK_Post_User1">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Post" EntitySet="Posts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BlockedList">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="Int32" Nullable="false" />
+          <Property Name="BlockedUser" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User1" Relationship="TwitterOnVaadinModel.FK_BlockedList_User" FromRole="BlockedList" ToRole="User" />
+          <NavigationProperty Name="User2" Relationship="TwitterOnVaadinModel.FK_BlockedList_User1" FromRole="BlockedList" ToRole="User" />
+        </EntityType>
+        <EntityType Name="FriendList">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="Int32" Nullable="false" />
+          <Property Name="Friend" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User1" Relationship="TwitterOnVaadinModel.FK_FriendList_User" FromRole="FriendList" ToRole="User" />
+          <NavigationProperty Name="User2" Relationship="TwitterOnVaadinModel.FK_FriendList_User1" FromRole="FriendList" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Post1" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Date" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="User" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User1" Relationship="TwitterOnVaadinModel.FK_Post_User" FromRole="Post" ToRole="User" />
+          <Property Type="Int32" Name="Author" Nullable="false" />
+          <NavigationProperty Name="User1_1" Relationship="TwitterOnVaadinModel.FK_Post_User1" FromRole="Post" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Forename" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Surname" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Photo" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Admin" Type="Boolean" Nullable="false" />
+          <Property Name="Ban" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="BlockedLists" Relationship="TwitterOnVaadinModel.FK_BlockedList_User" FromRole="User" ToRole="BlockedList" />
+          <NavigationProperty Name="BlockedLists1" Relationship="TwitterOnVaadinModel.FK_BlockedList_User1" FromRole="User" ToRole="BlockedList" />
+          <NavigationProperty Name="FriendLists" Relationship="TwitterOnVaadinModel.FK_FriendList_User" FromRole="User" ToRole="FriendList" />
+          <NavigationProperty Name="FriendLists1" Relationship="TwitterOnVaadinModel.FK_FriendList_User1" FromRole="User" ToRole="FriendList" />
+          <NavigationProperty Name="Posts" Relationship="TwitterOnVaadinModel.FK_Post_User" FromRole="User" ToRole="Post" />
+          <NavigationProperty Name="Posts_1" Relationship="TwitterOnVaadinModel.FK_Post_User1" FromRole="User" ToRole="Post" />
+        </EntityType>
+        <Association Name="FK_BlockedList_User">
+          <End Role="User" Type="TwitterOnVaadinModel.User" Multiplicity="1" />
+          <End Role="BlockedList" Type="TwitterOnVaadinModel.BlockedList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BlockedList">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlockedList_User1">
+          <End Role="User" Type="TwitterOnVaadinModel.User" Multiplicity="1" />
+          <End Role="BlockedList" Type="TwitterOnVaadinModel.BlockedList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BlockedList">
+              <PropertyRef Name="BlockedUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FriendList_User">
+          <End Role="User" Type="TwitterOnVaadinModel.User" Multiplicity="1" />
+          <End Role="FriendList" Type="TwitterOnVaadinModel.FriendList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="FriendList">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FriendList_User1">
+          <End Role="User" Type="TwitterOnVaadinModel.User" Multiplicity="1" />
+          <End Role="FriendList" Type="TwitterOnVaadinModel.FriendList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="FriendList">
+              <PropertyRef Name="Friend" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Post_User">
+          <End Role="User" Type="TwitterOnVaadinModel.User" Multiplicity="1" />
+          <End Role="Post" Type="TwitterOnVaadinModel.Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Post">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Post_User1">
+          <End Type="TwitterOnVaadinModel.User" Role="User" Multiplicity="1" />
+          <End Type="TwitterOnVaadinModel.Post" Role="Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Post">
+              <PropertyRef Name="Author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TwitterOnVaadinModelStoreContainer" CdmEntityContainer="TwitterOnVaadinEntities">
+          <EntitySetMapping Name="BlockedLists"><EntityTypeMapping TypeName="TwitterOnVaadinModel.BlockedList"><MappingFragment StoreEntitySet="BlockedList">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="User" ColumnName="User" />
+            <ScalarProperty Name="BlockedUser" ColumnName="BlockedUser" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FriendLists"><EntityTypeMapping TypeName="TwitterOnVaadinModel.FriendList"><MappingFragment StoreEntitySet="FriendList">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="User" ColumnName="User" />
+            <ScalarProperty Name="Friend" ColumnName="Friend" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Posts"><EntityTypeMapping TypeName="TwitterOnVaadinModel.Post"><MappingFragment StoreEntitySet="Post">
+            <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="Post1" ColumnName="Post" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="User" ColumnName="User" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="TwitterOnVaadinModel.User"><MappingFragment StoreEntitySet="User">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="Forename" ColumnName="Forename" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+            <ScalarProperty Name="Age" ColumnName="Age" />
+            <ScalarProperty Name="Username" ColumnName="Username" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="Photo" ColumnName="Photo" />
+            <ScalarProperty Name="Admin" ColumnName="Admin" />
+            <ScalarProperty Name="Ban" ColumnName="Ban" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="TwitterOnVaadinModel" ZoomLevel="97">
+        <EntityTypeShape EntityType="TwitterOnVaadinModel.BlockedList" Width="1.5" PointX="3" PointY="1.25" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="TwitterOnVaadinModel.FriendList" Width="1.5" PointX="3" PointY="3.875" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="TwitterOnVaadinModel.Post" Width="1.5" PointX="3" PointY="6.625" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="TwitterOnVaadinModel.User" Width="1.5" PointX="0.75" PointY="3" Height="3.7109993489583335" IsExpanded="true" />
+        <AssociationConnector Association="TwitterOnVaadinModel.FK_BlockedList_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.29687375" PointY="3" />
+          <ConnectorPoint PointX="1.29687375" PointY="2.2800482669270825" />
+          <ConnectorPoint PointX="1.7213560416666669" PointY="2.2800482669270821" />
+          <ConnectorPoint PointX="1.8880227083333334" PointY="2.2800482669270825" />
+          <ConnectorPoint PointX="3" PointY="2.2800482669270825" />
+        </AssociationConnector>
+        <AssociationConnector Association="TwitterOnVaadinModel.FK_BlockedList_User1" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.8046893750000002" PointY="3" />
+          <ConnectorPoint PointX="1.8046893750000002" PointY="1.7337716334635414" />
+          <ConnectorPoint PointX="3" PointY="1.7337716334635414" />
+        </AssociationConnector>
+        <AssociationConnector Association="TwitterOnVaadinModel.FK_FriendList_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.1439290364583332" />
+          <ConnectorPoint PointX="3" PointY="5.1439290364583332" />
+        </AssociationConnector>
+        <AssociationConnector Association="TwitterOnVaadinModel.FK_FriendList_User1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.4469645182291666" />
+          <ConnectorPoint PointX="3" PointY="4.4469645182291666" />
+        </AssociationConnector>
+        <AssociationConnector Association="TwitterOnVaadinModel.FK_Post_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="6.90330078125" />
+          <ConnectorPoint PointX="1.5" PointY="7.946595552083334" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="7.9465955520833331" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="7.946595552083334" />
+          <ConnectorPoint PointX="3" PointY="7.946595552083334" />
+        </AssociationConnector>
+        <AssociationConnector Association="TwitterOnVaadinModel.FK_Post_User1" >
+          <ConnectorPoint PointX="1.9062525" PointY="6.90330078125" />
+          <ConnectorPoint PointX="1.9062525" PointY="8.4994949375000015" />
+          <ConnectorPoint PointX="3" PointY="8.4994949375000015" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

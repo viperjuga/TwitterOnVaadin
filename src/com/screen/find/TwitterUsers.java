@@ -1,7 +1,6 @@
 package com.screen.find;
 
 import com.models.SelectedUser;
-import com.models.User;
 import com.screen.main.Main;
 import com.utils.Utils;
 import com.vaadin.navigator.View;

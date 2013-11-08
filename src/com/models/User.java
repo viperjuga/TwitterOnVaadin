@@ -9,11 +9,19 @@ package com.models;
  */
 public class User {
 
+    private int mId;
     private String mForename;
     private String mSurname;
     private String mAge;
     private String mUserName;
+    private String mPhoto;
 
+    public int getId(){
+        return mId;
+    }
+    public void setId(int id){
+        mId = id;
+    }
     public String getForename(){
         return mForename;
     }
@@ -38,5 +46,11 @@ public class User {
     }
     public void setUsername(String username){
         mUserName = username;
+    }
+    public String getPhoto(){
+        return mPhoto;
+    }
+    public void setPhoto(String photo){
+        mPhoto = photo;
     }
 }
