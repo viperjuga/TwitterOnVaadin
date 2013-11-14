@@ -8,7 +8,6 @@
           <element id="module-output" name="TwitterOnVaadin" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="vaadin-6.8.5" />
           <element id="library" level="project" name="Vaadin Server" />
         </element>
       </element>

@@ -1,11 +1,14 @@
 package com.screen.login;
 
+import com.models.User;
+import com.service.ServiceProxy;
 import com.utils.Utils;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.*;
 
 import java.io.IOException;
+import java.rmi.RemoteException;
 
 /**
  * User: ASUS
@@ -14,7 +17,8 @@ import java.io.IOException;
  */
 public class Login extends VerticalLayout implements View {
 
-
+    TextField mUsername;
+    PasswordField mPassword;
      //<editor-fold desc="Constructor">
     public Login(){
         init();
@@ -42,13 +46,13 @@ public class Login extends VerticalLayout implements View {
             return null;
         }
 
-        TextField username = new TextField();
-        PasswordField password = new PasswordField();
+        mUsername = new TextField();
+        mPassword = new PasswordField();
         Button login = new Button("Login", btn_login_click);
         Button registration = new Button("Registration", btn_registration_click);
 
-        customLayout.addComponent(username, "username");
-        customLayout.addComponent(password, "password");
+        customLayout.addComponent(mUsername, "username");
+        customLayout.addComponent(mPassword, "password");
         customLayout.addComponent(login, "ok");
         customLayout.addComponent(registration, "registration");
 
@@ -67,9 +71,17 @@ public class Login extends VerticalLayout implements View {
     Button.ClickListener btn_login_click = new Button.ClickListener(){
         @Override
         public void buttonClick(Button.ClickEvent clickEvent) {
-           getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
-//            String yourAcc = String.format("Your name:%s Your password:%s",mUserName,mPassword);
-//            mCtx.showNotification(yourAcc);
+            User myUser = new User();
+            try {
+            ServiceProxy service = new ServiceProxy();
+                myUser = service.requestGetUser(mUsername.toString(), mPassword.toString());
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+
+            //getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
+           String yourAcc = String.format("Your name:%s Your password:%s",myUser.getForename(),myUser.getSurname());
+            UI.getCurrent().showNotification(yourAcc);
         }
     };
 

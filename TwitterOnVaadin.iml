@@ -22,6 +22,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 6.0" level="application_server_libraries" />
     <orderEntry type="library" scope="PROVIDED" name="Vaadin Client" level="project" />
     <orderEntry type="library" name="Vaadin Server" level="project" />
+    <orderEntry type="library" name="ksoap2-j2se-full-2.1.2" level="project" />
   </component>
 </module>
 

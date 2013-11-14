@@ -11,7 +11,8 @@ public class Post {
 
     private String mAuthor;
     private String mPost;
-    private String mDetails;
+    private String mDate;
+    private String mUser;
 
     public String getAuthor(){
         return mAuthor;
@@ -27,11 +28,17 @@ public class Post {
         mPost = post;
     }
 
-    public String getDetails(){
-        return mDetails;
+    public String getDate(){
+        return mDate;
     }
-    public void setDetails(String details){
-        mDetails = details;
+    public void setDate(String details){
+        mDate = details;
+    }
+    public String getUser(){
+        return mUser;
+    }
+    public void setUser(String user){
+        mUser = user;
     }
 
 }

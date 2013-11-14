@@ -14,6 +14,7 @@ public class User {
     private String mSurname;
     private String mAge;
     private String mUserName;
+    private String mPassword;
     private String mPhoto;
 
     public int getId(){
@@ -52,5 +53,11 @@ public class User {
     }
     public void setPhoto(String photo){
         mPhoto = photo;
+    }
+    public String getPassword(){
+     return mPassword;
+    }
+    public void setPassword(String password){
+        mPassword = password;
     }
 }
