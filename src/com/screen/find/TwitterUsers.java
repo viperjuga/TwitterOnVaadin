@@ -1,7 +1,9 @@
 package com.screen.find;
 
 import com.models.SelectedUser;
+import com.models.User;
 import com.screen.main.Main;
+import com.service.ServiceProxy;
 import com.utils.Utils;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
@@ -9,6 +11,7 @@ import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.*;
 
 import java.io.IOException;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 /**
@@ -19,10 +22,11 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class TwitterUsers extends VerticalLayout implements View {
-
+    ArrayList<User> mUsers;
     //<editor-fold desc="Constructor">
     public TwitterUsers(){
         init();
+        mUsers = new ArrayList<User>();
     }
     //</editor-fold>
 
@@ -63,15 +67,21 @@ public class TwitterUsers extends VerticalLayout implements View {
     private Table createTable(){
         Table newsTable = new Table();
         newsTable.addContainerProperty("User", Button.class, null);
+        ServiceProxy proxy = new ServiceProxy();
 
-        for (int i=0; i < Utils.getHardcodedUsers().size(); i++) {
+        try {
+             mUsers = proxy.requestGetAllUsers();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+        for (int i=0; i < mUsers.size(); i++) {
 
             Integer itemId = new Integer(i);
 
             // Create a button and handle its click. A Button does not
             // know the item it is contained in, so we have to store the
             // item ID as user-defined data.
-            Button user = new Button(Utils.getHardcodedUsers().get(i).getUsername());
+            Button user = new Button(mUsers.get(i).getUsername());
             user.setData(itemId);
             user.addClickListener(show_user);
             user.addStyleName("link");
@@ -105,7 +115,7 @@ public class TwitterUsers extends VerticalLayout implements View {
         public void buttonClick(Button.ClickEvent clickEvent) {
             Integer iid = (Integer)clickEvent.getButton().getData();
 
-            SelectedUser user = new SelectedUser(Utils.getHardcodedUsers().get(iid));
+            SelectedUser user = new SelectedUser(mUsers.get(iid));
 
 getSession().getSession().setAttribute("selectedUser", user);
             getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);

@@ -1,12 +1,15 @@
 package com.screen.registration;
 
 import com.TwitterOnVaadin;
+import com.models.User;
+import com.service.ServiceProxy;
 import com.utils.Utils;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.*;
 
 import java.io.IOException;
+import java.rmi.RemoteException;
 
 /**
  * User: ASUS
@@ -14,10 +17,14 @@ import java.io.IOException;
  * Time: 9:10 AM
  */
 public class Registration extends VerticalLayout implements View {
+    TextField mSurname;
+    TextField mForename;
+    TextField mAge;
+    TextField mUsername;
+    PasswordField mPassword;
 
     //<editor-fold desc="Constructor">
     public Registration(){
-
         init();
     }
     //</editor-fold>
@@ -42,20 +49,20 @@ public class Registration extends VerticalLayout implements View {
             return null;
         }
 
-        TextField surname = new TextField();
-        TextField forename = new TextField();
-        TextField age = new TextField();
-        TextField username = new TextField();
-        PasswordField password = new PasswordField();
+        mSurname = new TextField();
+        mForename = new TextField();
+        mAge = new TextField();
+        mUsername = new TextField();
+        mPassword = new PasswordField();
         PasswordField repPassword = new PasswordField();
         Button ok = new Button("Ok",btn_ok_click);
         Button cancel = new Button("Cancel",btn_cancel_click);
 
-        customLayout.addComponent(forename, "forename");
-        customLayout.addComponent(surname, "surname");
-        customLayout.addComponent(age,"age");
-        customLayout.addComponent(username, "username");
-        customLayout.addComponent(password, "password");
+        customLayout.addComponent(mForename, "forename");
+        customLayout.addComponent(mSurname, "surname");
+        customLayout.addComponent(mAge,"age");
+        customLayout.addComponent(mUsername, "username");
+        customLayout.addComponent(mPassword, "password");
         customLayout.addComponent(repPassword,"reppassword");
         customLayout.addComponent(ok, "ok");
         customLayout.addComponent(cancel, "cancel");
@@ -76,7 +83,18 @@ public class Registration extends VerticalLayout implements View {
 
         @Override
         public void buttonClick(Button.ClickEvent clickEvent) {
-            Notification.show("Now you can try login!");
+            ServiceProxy service = new ServiceProxy();
+             User user = new User();
+            user.setForename(String.valueOf(mForename));
+            user.setUsername(String.valueOf(mUsername));
+            user.setPassword(String.valueOf(mPassword));
+            user.setAge(String.valueOf(mAge));
+
+            try {
+                service.requestAddUser(user);
+            } catch (RemoteException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
             getUI().getNavigator().navigateTo(Utils.LOGIN_SCREEN);
         }
     };

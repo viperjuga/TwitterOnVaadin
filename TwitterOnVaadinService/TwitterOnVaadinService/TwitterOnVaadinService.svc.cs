@@ -11,12 +11,12 @@ namespace TwitterOnVaadinService
 {
     public class TwitterOnVaadinService : ITwitterOnVaadinService
     {
-        public UserDB GetUser(string username, string password)
+        public UserDB GetUser(string Username, string Password)
         {
             var user = new UserDB();
             try
             {
-                var res = DataFunctions.GetUser(username, password);
+                var res = DataFunctions.GetUser(Username, Password);
                 user = new UserDB
                 {
                     Username = res.Username,
@@ -114,17 +114,16 @@ namespace TwitterOnVaadinService
             }
             return posts;
         }
-        public bool AddPost(PostDB newPost)
+        public bool AddPost(string Post, int Author, int User, string Date)
         {
             bool res = false;
             try
             {
                 var post = new Post{
-                    Post1 = newPost.Post,
-                    Author = newPost.Author,
-                    User = newPost.User,
-                    Date = newPost.Date,
-                    id = newPost.Id,
+                    Post1 = Post,
+                    Author = Author,
+                    User = User,
+                    Date = Date,
                 };
                 res = DataFunctions.AddPost(post);
             }

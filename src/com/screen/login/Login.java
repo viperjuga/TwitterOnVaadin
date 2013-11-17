@@ -78,8 +78,8 @@ public class Login extends VerticalLayout implements View {
             } catch (Throwable e) {
                 e.printStackTrace();
             }
-
-            //getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
+             if(myUser != null)
+                getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
            String yourAcc = String.format("Your name:%s Your password:%s",myUser.getForename(),myUser.getSurname());
             UI.getCurrent().showNotification(yourAcc);
         }

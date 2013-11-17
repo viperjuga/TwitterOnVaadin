@@ -25,6 +25,7 @@ public class ServiceProxy {
         private  final String OperationAddBlockedUser = "AddBlockedUser";
         private  final String OperationAddFriendUser = "AddFriendUser";
         private  final String OperationAddPost = "AddPost";
+        private  final String OperationAddUser = "AddUser";
         private  final String OperationDeleteBlockedUser = "DeleteBlockedUser";
         private  final String OperationDeleteFriendUser = "DeleteFriendUser";
         private  final String OperationDeletePost = "DeletePost";
@@ -56,6 +57,7 @@ public class ServiceProxy {
         private  final String PropertyUserId = "userId";
         private  final String PropertyBlockedId = "blockedId";
 
+
         public ServiceProxy() {
             mService = new HttpTransportSE(Endpoint);
         }
@@ -65,7 +67,8 @@ public class ServiceProxy {
             result.setForename(object.getProperty(PropertyForename).toString());
             result.setSurname(object.getProperty(PropertySurname).toString());
             result.setAge(object.getProperty(PropertyAge).toString());
-            result.setPhoto(object.getProperty(PropertyPhoto).toString());
+            if(object.getProperty(PropertyPhoto) != null)
+                result.setPhoto(object.getProperty(PropertyPhoto).toString());
             result.setUsername(object.getProperty(PropertyUsername).toString());
             result.setId(Integer.valueOf(object.getProperty(PropertyId).toString()));
             result.setPassword(object.getProperty(PropertyPassword).toString());
@@ -81,7 +84,8 @@ public class ServiceProxy {
                 temp.setForename(soapObject.getProperty(PropertyForename).toString());
                 temp.setSurname(soapObject.getProperty(PropertySurname).toString());
                 temp.setAge(soapObject.getProperty(PropertyAge).toString());
-                temp.setPhoto(soapObject.getProperty(PropertyPhoto).toString());
+                if(soapObject.getProperty(PropertyPhoto) != null)
+                    temp.setPhoto(soapObject.getProperty(PropertyPhoto).toString());
                 temp.setUsername(soapObject.getProperty(PropertyUsername).toString());
                 temp.setId(Integer.valueOf(soapObject.getProperty(PropertyId).toString()));
                 temp.setPassword(soapObject.getProperty(PropertyPassword).toString());
@@ -90,7 +94,7 @@ public class ServiceProxy {
             return result;
         }
 
-        private ArrayList<Post> SoapObjectToCardStatuses(SoapObject objects) {
+        private ArrayList<Post> SoapObjectToPosts(SoapObject objects) {
             ArrayList<Post> result = new ArrayList<Post>();
             Post temp;
             for( int i=0; i < objects.getPropertyCount(); i++){
@@ -121,52 +125,71 @@ public class ServiceProxy {
             }
         }
 
-//        public DriverLicence registerViolation(String licenceID, int violationTypeID, int points, int officerID) throws RemoteException {
-//            SoapObject object = new SoapObject(Namespace, OperationRegisterViolation);
-//            object.addProperty(PropertyLicenceID, licenceID);
-//            object.addProperty(PropertyViolationTypeID, String.valueOf(violationTypeID));
-//            object.addProperty(PropertyPoints, String.valueOf(points));
-//            object.addProperty(PropertyOfficerID, String.valueOf(officerID));
-//            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-//            envelope.dotNet = true;
-//            envelope.setOutputSoapObject(object);
-//            try {
-//                mService.call(OperationAction + OperationRegisterViolation, envelope);
-//                SoapObject response = (SoapObject) envelope.getResponse();
-//                return SoapObjectToDriversLicense(response);
-//            } catch (Exception ex) {
-//                throw new RemoteException(ex.toString());
-//            }
-//        }
-//
-//        public ArrayList<CardStatus> getAllStatuses() throws RemoteException {
-//            SoapObject object = new SoapObject(Namespace, OperationGetAllStatuses);;
-//            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-//            envelope.dotNet = true;
-//            envelope.setOutputSoapObject(object);
-//            try {
-//                mService.call(OperationAction + OperationGetAllStatuses, envelope);
-//                SoapObject response = (SoapObject) envelope.getResponse();
-//                return SoapObjectToCardStatuses(response);
-//            } catch (Exception ex) {
-//                throw new RemoteException(ex.toString());
-//            }
-//        }
-//
-//        public ArrayList<ActiveViolation> getActiveViolations(String licenseNumber) throws RemoteException {
-//            SoapObject object = new SoapObject(Namespace, OperationGetActiveViolations);
-//            object.addProperty(PropertyLicenceID, licenseNumber);
-//            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-//            envelope.dotNet = true;
-//            envelope.setOutputSoapObject(object);
-//            try {
-//                mService.call(OperationAction + OperationGetActiveViolations, envelope);
-//                SoapObject response = (SoapObject) envelope.getResponse();
-//                return SoapObjectToViolations(response);
-//            } catch (Exception ex) {
-//                throw new RemoteException(ex.toString());
-//            }
-//        }
+       public ArrayList<User> requestGetAllUsers() throws RemoteException {
+            SoapObject object = new SoapObject(Namespace, OperationGetAllUsers);
+            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+            envelope.dotNet = true;
+            envelope.setOutputSoapObject(object);
+            try {
+                mService.call(OperationAction + OperationGetAllUsers, envelope);
+                SoapObject response = (SoapObject) envelope.getResponse();
+                return SoapObjectToUsers(response);
+            } catch (Exception ex) {
+                throw new RemoteException(ex.toString());
+            }
+       }
+
+        public ArrayList<Post> requestGetPostForUser(String userId) throws RemoteException {
+            SoapObject object = new SoapObject(Namespace, OperationGetPosts);
+            object.addProperty(PropertyUserId, userId);
+            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+            envelope.dotNet = true;
+            envelope.setOutputSoapObject(object);
+            try {
+                mService.call(OperationAction + OperationGetPosts, envelope);
+                SoapObject response = (SoapObject) envelope.getResponse();
+                return SoapObjectToPosts(response);
+            } catch (Exception ex) {
+                throw new RemoteException(ex.toString());
+            }
+
+        }
+        public boolean requestAddPost(Post newPost) throws RemoteException {
+            SoapObject object = new SoapObject(Namespace, OperationAddPost);
+            object.addProperty(PropertyAuthor, newPost.getAuthor());
+            object.addProperty(PropertyDate, newPost.getDate());
+            object.addProperty(PropertyPost, newPost.getPost());
+            object.addProperty(PropertyUser, newPost.getUser());
+            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+            envelope.dotNet = true;
+            envelope.setOutputSoapObject(object);
+
+            try {
+                mService.call(OperationAction + OperationAddPost, envelope);
+                return Boolean.valueOf(envelope.getResponse().toString());
+            } catch (Exception ex) {
+                throw new RemoteException(ex.toString());
+            }
+        }
+        public boolean requestAddUser(User newUser) throws RemoteException {
+            SoapObject object = new SoapObject(Namespace, OperationAddUser);
+            object.addProperty(PropertyForename, newUser.getForename());
+            object.addProperty(PropertySurname, newUser.getSurname());
+            object.addProperty(PropertyAge, newUser.getAge());
+            object.addProperty(PropertyPhoto, newUser.getPhoto());
+            object.addProperty(PropertyUsername, newUser.getUsername());
+            object.addProperty(PropertyPassword, newUser.getPassword());
+            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+            envelope.dotNet = true;
+            envelope.setOutputSoapObject(object);
+
+            try {
+                mService.call(OperationAction + OperationAddUser, envelope);
+                return Boolean.valueOf(envelope.getResponse().toString());
+            } catch (Exception ex) {
+                throw new RemoteException(ex.toString());
+            }
+        }
 //
 //        public ArrayList<ViolationType> getAllViolationType() throws RemoteException {
 //            SoapObject object = new SoapObject(Namespace, OperationGetAllViolationTypes );

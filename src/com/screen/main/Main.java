@@ -1,7 +1,9 @@
 package com.screen.main;
 
+import com.models.Post;
 import com.models.SelectedUser;
 import com.models.User;
+import com.service.ServiceProxy;
 import com.utils.Utils;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
@@ -10,8 +12,13 @@ import com.vaadin.server.Resource;
 import com.vaadin.server.StreamResource;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.ui.*;
+import org.apache.james.mime4j.field.datetime.DateTime;
 
 import java.io.IOException;
+import java.rmi.RemoteException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * User: ASUS
@@ -19,10 +26,11 @@ import java.io.IOException;
  * Time: 12:03 AM
  */
 public class Main extends VerticalLayout implements View {
-
+    ArrayList<Post> mPosts;
     //<editor-fold desc="Constructor">
     public Main(){
         init();
+        mPosts = new ArrayList<Post>();
     }
     //</editor-fold>
 
@@ -76,23 +84,30 @@ public class Main extends VerticalLayout implements View {
         MenuBar menuBar = new MenuBar();
         menuBar.addItem("Main", null);
         menuBar.addItem("Find users",find_user);
-        menuBar.addItem("Add post", null);
+        menuBar.addItem("Add post", add_post);
         menuBar.addItem("Blocked users", null);
         menuBar.addItem("Friends", null);
         menuBar.setWidth("400");
         return menuBar;
     }
 
-    private Table createTable(){
+    private Table createTable() {
         Table newsTable = new Table("News");
         newsTable.addContainerProperty("User", Label.class, null);
         newsTable.addContainerProperty("Post", Button.class, null);
         newsTable.addContainerProperty("Details", Label.class, null);
+          ServiceProxy proxy = new ServiceProxy();
 
+        try {
+            //TODO: getUserID to send in method
+            mPosts = proxy.requestGetPostForUser("0");
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
 /* Add a few items in the table. */
-        for (int i=0; i<100; i++) {
+        for (int i=0; i<mPosts.size(); i++) {
             // Create the fields for the current table row
-            Label sumField = new Label("User " + i);
+            Label sumField = new Label(mPosts.get(i).getAuthor());
 
             Integer itemId = new Integer(i);
 
@@ -103,7 +118,7 @@ public class Main extends VerticalLayout implements View {
             postField.setData(itemId);
             postField.addClickListener(show_details_click);
             postField.addStyleName("link");
-            Label detailField = new Label("Date");
+            Label detailField = new Label(mPosts.get(i).getDate());
 
             // Create the table row.
             newsTable.addItem(new Object[]{sumField, postField, detailField},
@@ -128,13 +143,32 @@ public class Main extends VerticalLayout implements View {
             getUI().getNavigator().navigateTo(Utils.FIND_USERS);
         }
     };
+    MenuBar.Command add_post = new MenuBar.Command(){
+
+        @Override
+        public void menuSelected(MenuBar.MenuItem menuItem) {
+            ServiceProxy service = new ServiceProxy();
+
+            Post temp = new Post();
+            temp.setAuthor("0");
+            Date date = new Date();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm");
+            temp.setDate(sdf.format(date));
+            temp.setPost("HIIII");
+            temp.setUser("0");
+            try {
+                service.requestAddPost(temp);
+            } catch (RemoteException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+        }
+    };
 
     Button.ClickListener show_details_click = new Button.ClickListener(){
         @Override
         public void buttonClick(Button.ClickEvent clickEvent) {
             Integer iid = (Integer)clickEvent.getButton().getData();
-          //  mCtx.showNotification("Link " +
-               //     iid.intValue() + " clicked.");
+          UI.getCurrent().showNotification(mPosts.get(iid).getPost());
         }
     };
 

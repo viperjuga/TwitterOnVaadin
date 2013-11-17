@@ -94,6 +94,7 @@ namespace DBaseAgent
         {
             using (var db = new TwitterOnVaadinEntities())
             {
+                newPost.id = 1;
                 db.Posts.AddObject(newPost);
                 db.SaveChanges();
             }

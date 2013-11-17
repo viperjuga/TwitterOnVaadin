@@ -13,7 +13,7 @@ namespace TwitterOnVaadinService
     {
 
         [OperationContract]
-        UserDB GetUser(string username, string password);
+        UserDB GetUser(string Username, string Password);
         [OperationContract]
         bool UpdateUser(UserDB newUser);
 
@@ -23,7 +23,7 @@ namespace TwitterOnVaadinService
         [OperationContract]
         List<PostDB> GetPosts(int userId);
         [OperationContract]
-        bool AddPost(PostDB newPost);
+        bool AddPost(string Post, int Author, int User, string Date);
         [OperationContract]
         bool DeletePost(int postId);
         [OperationContract]
