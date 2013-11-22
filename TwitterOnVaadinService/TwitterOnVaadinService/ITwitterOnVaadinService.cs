@@ -15,8 +15,9 @@ namespace TwitterOnVaadinService
         [OperationContract]
         UserDB GetUser(string Username, string Password);
         [OperationContract]
-        bool UpdateUser(UserDB newUser);
-
+        bool UpdateUser(string Username, string Forename, string Surname, int Age, string Password, string Photo, bool Ban, int Id);
+        [OperationContract]
+        bool AddNewUser(string Username, string Forename, string Surname, int Age, string Password, string Photo);
         [OperationContract]
         List<UserDB> GetAllUsers();
 
@@ -27,7 +28,7 @@ namespace TwitterOnVaadinService
         [OperationContract]
         bool DeletePost(int postId);
         [OperationContract]
-        bool UpdatePost(PostDB newPost);
+        bool UpdatePost(string Post, int Author, int User, string Date, int Id);
 
         [OperationContract]
         List<UserDB> GetBlockedUsers(int userId);
@@ -78,7 +79,7 @@ namespace TwitterOnVaadinService
         [DataMember]
         public string Date { get; set; }
         [DataMember]
-        public int User { get; set; }
+        public string User { get; set; }
     }
 
 }

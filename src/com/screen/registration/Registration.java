@@ -88,10 +88,10 @@ public class Registration extends VerticalLayout implements View {
             user.setForename(String.valueOf(mForename));
             user.setUsername(String.valueOf(mUsername));
             user.setPassword(String.valueOf(mPassword));
+            user.setSurname(String.valueOf(mSurname));
             user.setAge(String.valueOf(mAge));
-
             try {
-                service.requestAddUser(user);
+                service.requestAddNewUser(user);
             } catch (RemoteException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
@@ -101,7 +101,8 @@ public class Registration extends VerticalLayout implements View {
 
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
-
+       removeAllComponents();
+        init();
     }
     //</editor-fold>
 

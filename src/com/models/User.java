@@ -16,6 +16,9 @@ public class User {
     private String mUserName;
     private String mPassword;
     private String mPhoto;
+    private boolean mBan;
+    private boolean mAdmin;
+
 
     public int getId(){
         return mId;
@@ -59,5 +62,17 @@ public class User {
     }
     public void setPassword(String password){
         mPassword = password;
+    }
+    public boolean isBanned(){
+        return mBan;
+    }
+    public void setBan(boolean ban){
+        mBan = ban;
+    }
+    public boolean isAdmin(){
+        return mAdmin;
+    }
+    public void setAdmin(boolean admin){
+        mAdmin = admin;
     }
 }

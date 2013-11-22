@@ -25,7 +25,7 @@ public class TwitterUsers extends VerticalLayout implements View {
     ArrayList<User> mUsers;
     //<editor-fold desc="Constructor">
     public TwitterUsers(){
-        init();
+
         mUsers = new ArrayList<User>();
     }
     //</editor-fold>
@@ -115,9 +115,9 @@ public class TwitterUsers extends VerticalLayout implements View {
         public void buttonClick(Button.ClickEvent clickEvent) {
             Integer iid = (Integer)clickEvent.getButton().getData();
 
-            SelectedUser user = new SelectedUser(mUsers.get(iid));
+            User user = mUsers.get(iid);
 
-getSession().getSession().setAttribute("selectedUser", user);
+UI.getCurrent().getSession().setAttribute("CurrentUser", user);
             getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
 
 
@@ -129,7 +129,8 @@ getSession().getSession().setAttribute("selectedUser", user);
 
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
-
+        removeAllComponents();
+        init();
     }
     //</editor-fold>
 }

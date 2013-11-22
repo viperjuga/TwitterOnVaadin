@@ -21,7 +21,7 @@ public class Login extends VerticalLayout implements View {
     PasswordField mPassword;
      //<editor-fold desc="Constructor">
     public Login(){
-        init();
+
     }
     //</editor-fold>
 
@@ -78,8 +78,13 @@ public class Login extends VerticalLayout implements View {
             } catch (Throwable e) {
                 e.printStackTrace();
             }
-             if(myUser != null)
-                getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
+
+            UI.getCurrent().getSession().setAttribute("CurrentUser", myUser);
+
+
+            if(myUser != null)
+            getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
+
            String yourAcc = String.format("Your name:%s Your password:%s",myUser.getForename(),myUser.getSurname());
             UI.getCurrent().showNotification(yourAcc);
         }
@@ -87,7 +92,8 @@ public class Login extends VerticalLayout implements View {
 
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
-
+             removeAllComponents();
+             init();
     }
     //</editor-fold>
 }

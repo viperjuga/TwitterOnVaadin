@@ -13,6 +13,7 @@ public class Post {
     private String mPost;
     private String mDate;
     private String mUser;
+    private int mId;
 
     public String getAuthor(){
         return mAuthor;
@@ -39,6 +40,12 @@ public class Post {
     }
     public void setUser(String user){
         mUser = user;
+    }
+    public void setId(int Id){
+        mId = Id;
+    }
+    public int getId(){
+        return mId;
     }
 
 }

@@ -29,7 +29,7 @@ public class Main extends VerticalLayout implements View {
     ArrayList<Post> mPosts;
     //<editor-fold desc="Constructor">
     public Main(){
-        init();
+        //init();
         mPosts = new ArrayList<Post>();
     }
     //</editor-fold>
@@ -48,17 +48,10 @@ public class Main extends VerticalLayout implements View {
         }
 
         String profileInfo = "";
-
-        if(getSession() != null && getSession().getSession()!=null){
-        SelectedUser user = (SelectedUser)getSession().getSession().getAttribute("selectedUser");
-
-        if(user == null){
-            User userr = new User();
-            profileInfo = String.format("Forename: %s\nSurname: %s\nAge: %s",userr.getForename(),userr.getSurname(),userr.getAge());
-        }
-        else{
+        User user = new User();
+        if(UI.getCurrent().getSession() != null){
+        user = (User)UI.getCurrent().getSession().getAttribute("CurrentUser");
             profileInfo = String.format("Forename: %s\nSurname: %s\nAge: %s",user.getForename(),user.getSurname(),user.getAge());
-        }
         }
         Label profile = new Label(profileInfo);
 //        //Image image = new Image(user.getUsername(),new ClassResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.png"));
@@ -66,7 +59,7 @@ public class Main extends VerticalLayout implements View {
 //        image.setWidth("30");
 
         // Instruct browser not to cache the image
-        Table news = createTable();
+        Table news = createTable(user.getId());
         MenuBar menu = createMenu();
 
         customLayout.addComponent(news, "wall");
@@ -91,7 +84,7 @@ public class Main extends VerticalLayout implements View {
         return menuBar;
     }
 
-    private Table createTable() {
+    private Table createTable(int userId) {
         Table newsTable = new Table("News");
         newsTable.addContainerProperty("User", Label.class, null);
         newsTable.addContainerProperty("Post", Button.class, null);
@@ -100,7 +93,7 @@ public class Main extends VerticalLayout implements View {
 
         try {
             //TODO: getUserID to send in method
-            mPosts = proxy.requestGetPostForUser("0");
+            mPosts = proxy.requestGetPostForUser(String.valueOf(userId));
         } catch (RemoteException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
@@ -174,7 +167,8 @@ public class Main extends VerticalLayout implements View {
 
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
-
+             removeAllComponents();
+             init();
     }
     //</e
     //</editor-fold>

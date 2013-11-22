@@ -36,21 +36,20 @@ namespace TwitterOnVaadinService
             }
             return user;
         }
-        public bool UpdateUser(UserDB newUser)
+        public bool UpdateUser(string Username, string Forename, string Surname, int Age, string Password, string Photo, bool Ban, int Id)
         {
             try
             {
                var userDb = new User
                {
-                    Username = newUser.Username,
-                    Forename = newUser.Forename,
-                    Surname = newUser.Surname,
-                    Age = (int)newUser.Age,
-                    Password = newUser.Password,
-                    Photo = newUser.Photo,
-                    id = newUser.Id,
-                    Admin = newUser.Admin,
-                    Ban = newUser.Ban,
+                    Username = Username,
+                    Forename = Forename,
+                    Surname = Surname,
+                    Age = Age,
+                    Password = Password,
+                    Photo = Photo,
+                    id = Id,
+                    Ban = Ban,
                };
                var res = DataFunctions.UpdateUser(userDb);
             }catch(Exception ex)
@@ -59,6 +58,31 @@ namespace TwitterOnVaadinService
                 return false;
             }
             return true;;
+        }
+
+        public bool AddNewUser(string Username, string Forename, string Surname, int Age, string Password, string Photo)
+        {
+            try
+            {
+                var userDb = new User
+                {
+                    Username = Username,
+                    Forename = Forename,
+                    Surname = Surname,
+                    Age = Age,
+                    Password = Password,
+                    Photo = Photo,
+                    Admin = false,
+                    Ban = false,
+                };
+                var res = DataFunctions.AddUser(userDb);
+            }
+            catch (Exception ex)
+            {
+                //TODO:Logging
+                return false;
+            }
+            return true;
         }
 
         public List<UserDB> GetAllUsers()
@@ -102,7 +126,7 @@ namespace TwitterOnVaadinService
                     {
                         Post = temp.Post1,
                         Author = temp.Author,
-                        User = temp.User,
+                        User = temp.User.ToString(),
                         Id = temp.id,
                         Date = temp.Date,
                     });
@@ -148,18 +172,18 @@ namespace TwitterOnVaadinService
             }
             return false;
         }
-        public bool UpdatePost(PostDB newPost)
+        public bool UpdatePost(string Post, int Author, int User, string Date, int Id)
         {
             bool res = false;
             try
             {
                 var post = new Post
                 {
-                    Post1 = newPost.Post,
-                    Author = newPost.Author,
-                    User = newPost.User,
-                    Date = newPost.Date,
-                    id = newPost.Id,
+                    Post1 = Post,
+                    Author = Author,
+                    User = User,
+                    Date = Date,
+                    id = Id,
                 };
                 res = DataFunctions.UpdatePost(post);
             }
