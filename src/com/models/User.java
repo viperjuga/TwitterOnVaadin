@@ -2,7 +2,7 @@ package com.models;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ASUS
+ * TwitterUser: ASUS
  * Date: 10/24/13
  * Time: 11:32 PM
  * To change this template use File | Settings | File Templates.

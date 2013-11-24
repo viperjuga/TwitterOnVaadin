@@ -1,13 +1,10 @@
-package com.screen.find;
+package com.screen.friends;
 
-import com.models.SelectedUser;
 import com.models.User;
-import com.screen.main.Main;
 import com.service.ServiceProxy;
 import com.utils.Utils;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
-import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.*;
 
 import java.io.IOException;
@@ -16,16 +13,16 @@ import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
- * TwitterUser: ASUS
- * Date: 10/25/13
- * Time: 10:35 AM
+ * User: ASUS
+ * Date: 11/24/13
+ * Time: 2:51 PM
  * To change this template use File | Settings | File Templates.
  */
-public class TwitterUsers extends VerticalLayout implements View {
+public class Friends extends VerticalLayout implements View {
     ArrayList<User> mUsers;
     User mCurrentUser;
     //<editor-fold desc="Constructor">
-    public TwitterUsers(){
+    public Friends(){
 
         mUsers = new ArrayList<User>();
     }
@@ -47,7 +44,7 @@ public class TwitterUsers extends VerticalLayout implements View {
     private CustomLayout createTwitterUsersLayout(){
         CustomLayout customLayout;
         try {
-            customLayout = new CustomLayout(getClass().getResourceAsStream("TwitterUsers.html"));
+            customLayout = new CustomLayout(getClass().getResourceAsStream("Friends.html"));
         } catch (IOException e) {
             e.printStackTrace();
             return null;
@@ -69,16 +66,16 @@ public class TwitterUsers extends VerticalLayout implements View {
     private Table createTable(){
         Table newsTable = new Table();
         newsTable.addContainerProperty("User", Button.class, null);
+        ;
         ServiceProxy proxy = new ServiceProxy();
 
         try {
-             mUsers = proxy.requestGetAllUsers();
+            mUsers = proxy.requestGetFriendUsers(mCurrentUser.getId());
         } catch (RemoteException e) {
             e.printStackTrace();
         }
         for (int i=0; i < mUsers.size(); i++) {
-                           if(mUsers.get(i).getUsername().equals(mCurrentUser.getUsername()))
-                               continue;
+
             Integer itemId = new Integer(i);
 
             // Create a button and handle its click. A Button does not
@@ -109,7 +106,7 @@ public class TwitterUsers extends VerticalLayout implements View {
 
         @Override
         public void menuSelected(MenuBar.MenuItem menuItem) {
-           getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
+            getUI().getNavigator().navigateTo(Utils.MAIN_SCREEN);
         }
     };
     Button.ClickListener show_user = new Button.ClickListener(){
@@ -122,11 +119,6 @@ public class TwitterUsers extends VerticalLayout implements View {
 
             UI.getCurrent().getSession().setAttribute("SelectedUser", user);
             getUI().getNavigator().navigateTo(Utils.TWITTER_USER);
-
-
-
-
-
         }
     };
 

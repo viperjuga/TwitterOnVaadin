@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.rmi.RemoteException;
 
 /**
- * User: ASUS
+ * TwitterUser: ASUS
  * Date: 10/3/13
  * Time: 9:00 AM
  */

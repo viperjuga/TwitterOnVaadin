@@ -21,12 +21,13 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * User: ASUS
+ * TwitterUser: ASUS
  * Date: 10/11/13
  * Time: 12:03 AM
  */
 public class Main extends VerticalLayout implements View {
     ArrayList<Post> mPosts;
+    User mCurrentUser;
     //<editor-fold desc="Constructor">
     public Main(){
         //init();
@@ -35,6 +36,7 @@ public class Main extends VerticalLayout implements View {
     //</editor-fold>
 
     public void init(){
+        mCurrentUser = (User)UI.getCurrent().getSession().getAttribute("CurrentUser");
 
         Panel panel = new Panel("Profile");
         panel.setSizeUndefined();
@@ -47,19 +49,14 @@ public class Main extends VerticalLayout implements View {
             return;
         }
 
-        String profileInfo = "";
-        User user = new User();
-        if(UI.getCurrent().getSession() != null){
-        user = (User)UI.getCurrent().getSession().getAttribute("CurrentUser");
-            profileInfo = String.format("Forename: %s\nSurname: %s\nAge: %s",user.getForename(),user.getSurname(),user.getAge());
-        }
+        String profileInfo = String.format("Forename: %s\nSurname: %s\nAge: %s",mCurrentUser.getForename(),mCurrentUser.getSurname(),mCurrentUser.getAge());
         Label profile = new Label(profileInfo);
 //        //Image image = new Image(user.getUsername(),new ClassResource("D:\\Downloads\\webDownloads\\lUugMYLfJP0.png"));
 //        image.setHeight("30");
 //        image.setWidth("30");
 
         // Instruct browser not to cache the image
-        Table news = createTable(user.getId());
+        Table news = createTable(mCurrentUser.getId());
         MenuBar menu = createMenu();
 
         customLayout.addComponent(news, "wall");
@@ -75,11 +72,10 @@ public class Main extends VerticalLayout implements View {
 
     private MenuBar createMenu(){
         MenuBar menuBar = new MenuBar();
-        menuBar.addItem("Main", null);
         menuBar.addItem("Find users",find_user);
         menuBar.addItem("Add post", add_post);
-        menuBar.addItem("Blocked users", null);
-        menuBar.addItem("Friends", null);
+        menuBar.addItem("Blocked users", blocked_users);
+        menuBar.addItem("Friends", friends);
         menuBar.setWidth("400");
         return menuBar;
     }
@@ -100,7 +96,16 @@ public class Main extends VerticalLayout implements View {
 /* Add a few items in the table. */
         for (int i=0; i<mPosts.size(); i++) {
             // Create the fields for the current table row
-            Label sumField = new Label(mPosts.get(i).getAuthor());
+            ArrayList<User> users = null;
+            try {
+                users = proxy.requestGetAllUsers();
+            } catch (RemoteException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+
+            User author = Utils.getUserFromListById(users, Integer.valueOf(mPosts.get(i).getAuthor()));
+            Label sumField = new Label(author.getUsername());
+
 
             Integer itemId = new Integer(i);
 
@@ -134,6 +139,20 @@ public class Main extends VerticalLayout implements View {
         @Override
         public void menuSelected(MenuBar.MenuItem menuItem) {
             getUI().getNavigator().navigateTo(Utils.FIND_USERS);
+        }
+    };
+    MenuBar.Command blocked_users = new MenuBar.Command(){
+
+        @Override
+        public void menuSelected(MenuBar.MenuItem menuItem) {
+            getUI().getNavigator().navigateTo(Utils.BLOCKED_USERS);
+        }
+    };
+    MenuBar.Command friends = new MenuBar.Command(){
+
+        @Override
+        public void menuSelected(MenuBar.MenuItem menuItem) {
+            getUI().getNavigator().navigateTo(Utils.FRIENDS);
         }
     };
     MenuBar.Command add_post = new MenuBar.Command(){

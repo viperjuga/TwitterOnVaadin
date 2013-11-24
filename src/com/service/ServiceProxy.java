@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ASUS
+ * TwitterUser: ASUS
  * Date: 11/8/13
  * Time: 10:42 AM
  * To change this template use File | Settings | File Templates.
@@ -104,6 +104,7 @@ public class ServiceProxy {
                 temp.setAuthor(soapObject.getProperty(PropertyAuthor).toString());
                 temp.setDate(soapObject.getProperty(PropertyDate).toString());
                 temp.setPost(soapObject.getProperty(PropertyPost).toString());
+                temp.setId(Integer.valueOf((soapObject.getProperty(PropertyId).toString())));
                 result.add(temp);
             }
             return result;
@@ -287,10 +288,10 @@ public class ServiceProxy {
             throw new RemoteException(ex.toString());
         }
     }
-    public boolean requestAddFriendUsers(int userId, int blockedUserId) throws RemoteException {
+    public boolean requestAddFriendUsers(int userId, int friendId) throws RemoteException {
         SoapObject object = new SoapObject(Namespace, OperationAddFriendUser);
         object.addProperty(PropertyUserId, userId);
-        object.addProperty(PropertyBlockedId, blockedUserId);
+        object.addProperty(PropertyFriendId, friendId);
         SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         envelope.dotNet = true;
         envelope.setOutputSoapObject(object);

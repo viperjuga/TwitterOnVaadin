@@ -48,10 +48,14 @@ namespace DBaseAgent
         {
             using (var db = new TwitterOnVaadinEntities())
             {
-                db.Users.AddObject(newUser);
-                db.SaveChanges();
+                if (db.Users.FirstOrDefault(e => e.Username == newUser.Username) != null)
+                {
+                    db.Users.AddObject(newUser);
+                    db.SaveChanges();
+                    return true;
+                }
+                return false;
             }
-            return true;
         }
 
         public static List<User> GetAllUsers()

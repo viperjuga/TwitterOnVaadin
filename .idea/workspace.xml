@@ -2,21 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="049e64cd-cede-4e4b-b28c-cafca72155fc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/screen/blockedusers/BlockedUsers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/screen/blockedusers/BlockedUsers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/screen/friends/Friends.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/screen/friends/Friends.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/screen/user/TwitterUser.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/screen/user/TwitterUser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TwitterOnVaadinService/TwitterOnVaadinService.suo" afterPath="$PROJECT_DIR$/TwitterOnVaadinService/TwitterOnVaadinService.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TwitterOnVaadinService/TwitterOnVaadinService/ITwitterOnVaadinService.cs" afterPath="$PROJECT_DIR$/TwitterOnVaadinService/TwitterOnVaadinService/ITwitterOnVaadinService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TwitterOnVaadinService/DBaseAgent/DBaseAgent.csproj" afterPath="$PROJECT_DIR$/TwitterOnVaadinService/DBaseAgent/DBaseAgent.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TwitterOnVaadinService/DBaseAgent/DataFunctions.cs" afterPath="$PROJECT_DIR$/TwitterOnVaadinService/DBaseAgent/DataFunctions.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/screen/login/Login.java" afterPath="$PROJECT_DIR$/src/com/screen/login/Login.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/screen/main/Main.java" afterPath="$PROJECT_DIR$/src/com/screen/main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/models/Post.java" afterPath="$PROJECT_DIR$/src/com/models/Post.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/screen/registration/Registration.java" afterPath="$PROJECT_DIR$/src/com/screen/registration/Registration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/models/SelectedUser.java" afterPath="$PROJECT_DIR$/src/com/models/SelectedUser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/service/ServiceProxy.java" afterPath="$PROJECT_DIR$/src/com/service/ServiceProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TwitterOnVaadinService/TwitterOnVaadinService/TwitterOnVaadinService.svc.cs" afterPath="$PROJECT_DIR$/TwitterOnVaadinService/TwitterOnVaadinService/TwitterOnVaadinService.svc.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/TwitterOnVaadin.java" afterPath="$PROJECT_DIR$/src/com/TwitterOnVaadin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java" afterPath="$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/models/User.java" afterPath="$PROJECT_DIR$/src/com/models/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/utils/Utils.java" afterPath="$PROJECT_DIR$/src/com/utils/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TwitterOnVaadinService/TwitterOnVaadinService/Web.config" afterPath="$PROJECT_DIR$/TwitterOnVaadinService/TwitterOnVaadinService/Web.config" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TwitterOnVaadin.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385108880411" ignored="false" />
+    <file path="/Dummy.txt" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385316636588" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/web/WEB-INF/web.xml" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1379529599902" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/src/com/MySampleVaadinApplication.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1379529599452" ignored="false" />
     <file path="/web.xml" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1381689759151" ignored="false" />
@@ -24,22 +34,25 @@
     <file path="/GeneralScreen.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1379716897888" ignored="false" />
     <file path="/LoginScreen.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380780466152" ignored="false" />
     <file path="/a.dummy" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380780491101" ignored="false" />
-    <file path="/fragment.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1383903190375" ignored="false" />
+    <file path="/fragment.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385313117386" ignored="false" />
     <file path="/Registration.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385114127505" ignored="false" />
     <file path="/Registration.html" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380783563110" ignored="false" />
     <file path="/Login.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385114140467" ignored="false" />
-    <file path="/TwitterOnVaadin.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382688421984" ignored="false" />
+    <file path="/TwitterOnVaadin.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385297701992" ignored="false" />
     <file path="/Login.html" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1380784379349" ignored="false" />
-    <file path="/Main.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385114524099" ignored="false" />
+    <file path="/Main.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385316524002" ignored="false" />
     <file path="/Main.html" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382646526557" ignored="false" />
-    <file path="/User.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385110485202" ignored="false" />
+    <file path="/User.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385296555285" ignored="false" />
     <file path="/Post.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385110280505" ignored="false" />
     <file path="/Users.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382688230582" ignored="false" />
-    <file path="/TwitterUsers.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385114162500" ignored="false" />
+    <file path="/TwitterUsers.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385315508132" ignored="false" />
     <file path="/TwitterUsers.html" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382689006837" ignored="false" />
-    <file path="/Utils.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382690391410" ignored="false" />
+    <file path="/Utils.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385316283165" ignored="false" />
     <file path="/SelectedUser.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1382690999855" ignored="false" />
-    <file path="/ServiceProxy.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385111699299" ignored="false" />
+    <file path="/ServiceProxy.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385312900351" ignored="false" />
+    <file path="/BlockedUsers.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385315568878" ignored="false" />
+    <file path="/Friends.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385315425580" ignored="false" />
+    <file path="/TwitterUser.java" changelist="049e64cd-cede-4e4b-b28c-cafca72155fc" time="1385316436291" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +69,53 @@
   <component name="DebuggerManager">
     <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/registration/Registration.java" line="92" class="com.screen.registration.Registration$2" package="com.screen.registration">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/service/ServiceProxy.java" line="195" class="com.service.ServiceProxy" package="com.service">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/service/ServiceProxy.java" line="291" class="com.service.ServiceProxy" package="com.service">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -92,83 +152,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java" line="117" class="com.screen.find.TwitterUsers$2" package="com.screen.find">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/main/Main.java" line="38" class="com.screen.main.Main" package="com.screen.main">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/main/Main.java" line="51" class="com.screen.main.Main" package="com.screen.main">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/screen/registration/Registration.java" line="93" class="com.screen.registration.Registration$2" package="com.screen.registration">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/service/ServiceProxy.java" line="194" class="com.service.ServiceProxy" package="com.service">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -181,25 +164,46 @@
       <file leaf-file-name="ServiceProxy.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/service/ServiceProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="0" selection-start="10309" selection-end="10309" vertical-scroll-proportion="0.0">
+            <state line="143" column="0" selection-start="7035" selection-end="7035" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Post.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/models/Post.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="38" selection-start="223" selection-end="223" vertical-scroll-proportion="-1.0135502">
+            <state line="11" column="27" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/models/User.java">
+      <file leaf-file-name="TwitterUsers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="23" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+            <state line="79" column="77" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitterUser.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/screen/user/TwitterUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="120" column="4" selection-start="4569" selection-end="4569" vertical-scroll-proportion="0.38323355">
+              <folding>
+                <element signature="e#6855#7392#0" expanded="true" />
+                <element signature="e#7385#7386#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="106" column="45" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -208,58 +212,46 @@
       <file leaf-file-name="Registration.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="29" selection-start="3319" selection-end="3319" vertical-scroll-proportion="0.0">
+            <state line="103" column="29" selection-start="3326" selection-end="3326" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockedUsers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/screen/blockedusers/BlockedUsers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="62" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Friends.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/screen/friends/Friends.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="21" selection-start="560" selection-end="571" vertical-scroll-proportion="-6.2">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/utils/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="84" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2414#3207#0" expanded="true" />
-                <element signature="e#3200#3201#0" expanded="true" />
+                <element signature="method#isUserInList#0;class#Utils#0" expanded="false" />
+                <element signature="method#getUserFromListById#0;class#Utils#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterUsers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java">
+      <file leaf-file-name="TwitterOnVaadin.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/TwitterOnVaadin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="30" selection-start="3787" selection-end="3787" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="39" selection-start="3518" selection-end="3518" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#4703#5402#0" expanded="true" />
-                <element signature="e#5395#5396#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuBar.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/ui/MenuBar.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="16" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListenerMethod.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/event/ListenerMethod.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="16" selection-start="2142" selection-end="2142" vertical-scroll-proportion="-3.84">
+            <state line="31" column="54" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -283,22 +275,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/screen/registration/Registration.html" />
-        <option value="$PROJECT_DIR$/src/com/screen/login/Login.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/com/screen/main/Main.html" />
-        <option value="$PROJECT_DIR$/src/com/screen/find/Users.java" />
-        <option value="$PROJECT_DIR$/src/com/screen/find/TwitterUsers.html" />
-        <option value="$PROJECT_DIR$/src/com/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/com/models/SelectedUser.java" />
-        <option value="$PROJECT_DIR$/src/com/TwitterOnVaadin.java" />
         <option value="$PROJECT_DIR$/src/com/models/Post.java" />
         <option value="$PROJECT_DIR$/src/com/models/User.java" />
-        <option value="$PROJECT_DIR$/src/com/service/ServiceProxy.java" />
         <option value="$PROJECT_DIR$/src/com/screen/registration/Registration.java" />
         <option value="$PROJECT_DIR$/src/com/screen/login/Login.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/user/user.html" />
+        <option value="$PROJECT_DIR$/src/com/screen/user/User.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/blockedusers/BlockedUsers.html" />
+        <option value="$PROJECT_DIR$/src/com/screen/friends/Friends.html" />
+        <option value="$PROJECT_DIR$/src/com/TwitterOnVaadin.java" />
+        <option value="$PROJECT_DIR$/src/com/service/ServiceProxy.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/friends/Friends.java" />
         <option value="$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/blockedusers/BlockedUsers.java" />
+        <option value="$PROJECT_DIR$/src/com/utils/Utils.java" />
         <option value="$PROJECT_DIR$/src/com/screen/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/screen/user/TwitterUser.java" />
       </list>
     </option>
   </component>
@@ -343,7 +335,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -355,6 +346,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -483,6 +475,13 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -643,7 +642,11 @@
       <created>1384699309453</created>
       <updated>1384699309453</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added proxy for communication with WebService">
+      <created>1385114789401</created>
+      <updated>1385114789401</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -674,24 +677,24 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6712095" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.9165247" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0834753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6712095" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.9165247" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33049405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17424242" sideWeight="0.67291313" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17424242" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -741,7 +744,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added proxy for communication with WebService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new Pages and added new Functionality :)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -765,6 +768,7 @@
     <MESSAGE value="added Models and Utils" />
     <MESSAGE value="Added WCF Service for communication with database" />
     <MESSAGE value="Added proxy for communication with WebService" />
+    <MESSAGE value="Added new Pages and added new Functionality :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -774,124 +778,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/server/ServerRpcManager.class">
+    <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/server/communication/ServerRpcHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/server/communication/UidlRequestHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="23" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/screen/user/TwitterUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="7" selection-start="57" selection-end="57" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="571" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/ui/MenuBar.class">
+    <entry file="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
+        <state line="5" column="24" selection-start="0" selection-end="672" vertical-scroll-proportion="-3.2692308" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screen/blockedusers/BlockedUsers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="7" selection-start="672" selection-end="672" vertical-scroll-proportion="-8.461538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/models/User.java">
+    <entry file="file://$PROJECT_DIR$/src/com/screen/friends/Friends.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="23" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+        <state line="27" column="7" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/event/ListenerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/com/TwitterOnVaadin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="16" selection-start="2142" selection-end="2142" vertical-scroll-proportion="-3.84">
+        <state line="31" column="54" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Downloads/webDownloads/vaadin-all-7.1.5/vaadin-server-7.1.5.jar!/com/vaadin/ui/UI.class">
+    <entry file="file://$PROJECT_DIR$/src/com/models/Post.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="143" selection-end="370" vertical-scroll-proportion="0.31716418">
+        <state line="11" column="27" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/service/ServiceProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="0" selection-start="10309" selection-end="10309" vertical-scroll-proportion="0.0">
+        <state line="143" column="0" selection-start="7035" selection-end="7035" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.java">
+    <entry file="file://$PROJECT_DIR$/src/com/screen/blockedusers/BlockedUsers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="29" selection-start="3319" selection-end="3319" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2414#3207#0" expanded="true" />
-            <element signature="e#3200#3201#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screen/login/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+        <state line="72" column="62" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/screen/find/TwitterUsers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="30" selection-start="3787" selection-end="3787" vertical-scroll-proportion="0.0">
+        <state line="79" column="77" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screen/friends/Friends.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="21" selection-start="560" selection-end="571" vertical-scroll-proportion="-6.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screen/registration/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="29" selection-start="3326" selection-end="3326" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="84" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#isUserInList#0;class#Utils#0" expanded="false" />
+            <element signature="method#getUserFromListById#0;class#Utils#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/screen/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="39" selection-start="3518" selection-end="3518" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#4703#5402#0" expanded="true" />
-            <element signature="e#5395#5396#0" expanded="true" />
-          </folding>
+        <state line="106" column="45" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/models/Post.java">
+    <entry file="file://$PROJECT_DIR$/src/com/screen/user/TwitterUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="223" selection-end="223" vertical-scroll-proportion="-1.0135502">
-          <folding />
+        <state line="120" column="4" selection-start="4569" selection-end="4569" vertical-scroll-proportion="0.38323355">
+          <folding>
+            <element signature="e#6855#7392#0" expanded="true" />
+            <element signature="e#7385#7386#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
